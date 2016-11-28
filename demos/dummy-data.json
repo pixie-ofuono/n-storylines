@@ -1,0 +1,118 @@
+{
+    "2016": {
+        "total": 8,
+        "months": [
+            {
+                "name": "January",
+                "total": 0,
+                "relevantArticles": []
+            },{
+                "name": "February",
+                "total": 0,
+                "relevantArticles": []
+            },{
+                "name": "March",
+                "total": 0,
+                "relevantArticles": []
+            },{
+                "name": "April",
+                "total": 0,
+                "relevantArticles": []
+            },{
+                "name": "May",
+                "total": 0,
+                "relevantArticles": []
+            },{
+                "name": "June",
+                "total": 0,
+                "relevantArticles": []
+            },{
+                "name": "July",
+                "total": 0,
+                "relevantArticles": []
+            },{
+                "name": "August",
+                "total": 0,
+                "relevantArticles": []
+            },{
+                "name": "September",
+                "total": 0,
+                "relevantArticles": []
+            },{
+                "name": "October",
+                "total": 0,
+                "relevantArticles": []
+            },{
+                "name": "November",
+                "total": 4,
+                "relevantArticles": [
+                    {
+                        "views": 26727,
+                        "id": '3567',
+                        "title": "Fed chief Yellen stands by central bank independence",
+                        "month": 10,
+                        "year": 2016
+                    },
+                    {
+                        "views": 4414,
+                        "id": '543',
+                        "title": "Trump and Yellen: the politicisation of the Fed",
+                        "month": 10,
+                        "year": 2016
+                    },
+                    {
+                        "views": 793,
+                        "id": '345',
+                        "title": "US dollar’s winning streak among longest on record",
+                        "month": 10,
+                        "year": 2016
+                    }
+                ]
+            },{
+                "name": "December",
+                "total": 4,
+                "relevantArticles": [
+                    {
+                        "views": 1927,
+                        "id": "123",
+                        "title": "France PM calls for calm after spate of attacks",
+                        "month": 11,
+                        "year": 2016
+                    },{
+                        "views": 1280,
+                        "id": "456",
+                        "title": "Keep calm in the face of European populism",
+                        "month": 11,
+                        "year": 2016
+                    }, {
+                        "views": 379,
+                        "id": "789",
+                        "title": "Watch your words or feed populism, French minister warns Germany",
+                        "month": 11,
+                        "year": 2016
+                    }]
+            }],
+        "relevantArticles": [
+            {
+                "views": 26727,
+                "id": '3567',
+                "title": "Fed chief Yellen stands by central bank independence",
+                "month": 10,
+                "year": 2016
+            },
+            {
+                "views": 4414,
+                "id": '543',
+                "title": "Trump and Yellen: the politicisation of the Fed",
+                "month": 10,
+                "year": 2016
+            },
+            { "views": 1927,
+              "id": "123",
+              "title": "France PM calls for calm after spate of attacks",
+              "month": 11,
+              "year": 2016
+            }
+        ]
+    }
+}

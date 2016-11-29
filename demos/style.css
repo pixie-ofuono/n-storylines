@@ -1,0 +1,35 @@
+body {
+  font-family: monospace;
+}
+
+.timeline {
+  display: flex;
+  background: #fff;
+  width: 100%;
+  padding-top: 10px;
+}
+.yearssss {
+  width: 100%;
+}
+.year {
+  background: #B11F42;
+  border: 1px solid white;
+  width: 100%;
+  height: 20px;
+}
+
+.article {
+  list-style-type: none;
+}
+
+p {
+  text-align: center;
+}
+
+.zoom {
+  float: left;
+}
+
+.totalz {
+  float: right
+}

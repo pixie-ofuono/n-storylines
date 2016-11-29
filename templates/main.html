@@ -1,28 +1,30 @@
-<!-- however many years, make divs -->
-<!-- based on yearly total, colour in div -->
 <div class="zoom">
-  Tap to zoom into years
+	Tap to zoom into years
 </div>
+
 <div class="totalz">
-  {{total}} stories total
+	{{total}} stories total
 </div>
+
 <div class="timeline">
-  {{#each years}}
-    <div class="yearssss">
-      <div class="year" style="opacity: 0.{{total}};"></div> <!-- massive WIP -->
-      <p>
-        {{year}}
-      </p>
-    </div>
-  {{/each}}
+	{{#if children}}
+		{{#each children}}
+		<div class="year">
+			<div class="year__heatmap-element" style="opacity: 0.{{total}};"></div>
+				<p>{{name}}</p>
+		</div>
+		{{/each}}
+	{{else}}
+		THIS IS A MONTH
+	{{/if}}
 </div>
 
 <div class="top-stories">
-  Most popular stories in {{years.0.year}} - {{years.2.year}} <!-- fix last index -->
-  <ul>
-  {{#each relevantArticles}}
-    <li class="article">{{title}}</li>
-    {{month}}, {{year}}
-  {{/each}}
-  </ul>
+	Most popular stories in {{children.name}}
+	<ul>
+		{{#each relevantArticles}}
+		<li class="article">{{title}}</li>
+		{{month}}, {{year}}
+		{{/each}}
+	</ul>
 </div>

@@ -6,5 +6,14 @@ Promise.all([
 ])
 	.then(([source, data]) => {
 		const template = Handlebars.compile(source);
-		document.querySelector('.supa-test').innerHTML = template(data);
+
+		const allYears = data;
+		const oneYear = data.children[2];
+		const oneMonth = oneYear.children[11];
+
+		document.querySelector('.supa-test').innerHTML = template(oneYear);
+
+		const script = document.createElement('script');
+		script.src = '../main.js';
+		document.head.appendChild(script);
 	});

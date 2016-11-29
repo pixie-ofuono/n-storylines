@@ -8,10 +8,10 @@ body {
   width: 100%;
   padding-top: 10px;
 }
-.yearssss {
+.year {
   width: 100%;
 }
-.year {
+.year__heatmap-element {
   background: #B11F42;
   border: 1px solid white;
   width: 100%;

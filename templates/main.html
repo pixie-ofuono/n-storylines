@@ -1,1 +1,33 @@
-<div>Storyline</div>
+<div class="zoom">
+	Tap to zoom into years
+</div>
+
+<div class="totalz">
+	{{total}} stories total
+</div>
+
+<div class="timeline">
+	{{#if children}}
+		{{#each children}}
+		<div class="timeline-element">
+			<div class="heatmap-segment" style="opacity: 0.{{total}};"></div>
+				<p>{{name}}</p>
+		</div>
+		{{/each}}
+	{{else}}
+    <div class="timeline-element">
+      <div class="heatmap-segment" style="opactiy: 0.{{total}};"></div>
+        <p> {{name}} </p>
+    </div>
+	{{/if}}
+</div>
+
+<div class="top-stories">
+	<!-- Most popular stories in {{children.name}} -->
+	<ul>
+		{{#each relevantArticles}}
+		<li class="article">{{title}}</li>
+		{{month}}, {{year}}
+		{{/each}}
+	</ul>
+</div>

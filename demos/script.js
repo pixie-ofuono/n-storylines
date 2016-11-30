@@ -5,24 +5,6 @@ Promise.all([
 		.then(res => res.json()),
 ])
 	.then(([source, data]) => {
-
-		// nothing to see here
-		const allTotals = data.children[1].children.map(year => year.total)
-
-		function calculateOpacity (value) {
-			allTotals.sort((a, b) => a - b);
-			const min = allTotals[0];
-			const max = allTotals[allTotals.length - 1];
-			const range = max - min;
-			return (value - min) / range;
-		}
-
-		data.children[1].children.forEach(month => {
-			data.children[1].children.find(x => x == month).weird = calculateOpacity(month.total);
-		})
-
-		console.log(data);
-
 		const template = Handlebars.compile(source);
 
 		Handlebars.registerHelper('abbreviate', (word) => {
@@ -30,8 +12,14 @@ Promise.all([
 		})
 
 		Handlebars.registerHelper('opacity', (total) => {
-			return total / 50;
+			return total / 75;
 		})
+
+		Handlebars.registerHelper('timestamp', (day, month, year) => {
+			let date = new Date(year, month)
+			return date.toLocaleString('en-US', { day: "numeric", month: "long", year: "numeric" })
+
+		});
 
 		document.querySelector('.container').innerHTML = template(data);
 

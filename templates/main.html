@@ -12,15 +12,15 @@
 	{{#if children}}
 		{{#each children}}
 		<div class="timeline-element">
-			<div class="heatmap-segment" style="opacity: {{opacity total}};"></div>
+			<div class="heatmap-segment" style="opacity: {{opacity}};"></div>
 				<p class="segment-name o-typography-aside__body--small">{{abbreviate name}}</p>
 		</div>
 		{{/each}}
 	{{else}}
-    <div class="timeline-element">
-      <div class="heatmap-segment" style="opacity: {{opacity total}};"></div>
-        <p class="segment-name o-typography-lead--small"> {{name}} </p>
-    </div>
+	<div class="timeline-element">
+	  <div class="heatmap-segment" style="opacity: {{opacity}};"></div>
+		<p class="segment-name o-typography-lead--small"> {{name}} </p>
+	</div>
 	{{/if}}
 </div>
 
@@ -30,7 +30,7 @@
 		{{#each relevantArticles}}
 		<li class="article o-typography-aside__headline--small">{{title}}</li>
 		<p class="o-typography-timestamp">
-      {{timestamp day month year}}
+	  {{timestamp day month year}}
 		</p>
 		{{/each}}
 	</ul>

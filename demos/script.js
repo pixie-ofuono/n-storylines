@@ -1,39 +1,41 @@
 Promise.all([
 	fetch('../templates/main.html')
 		.then(res => res.text()),
-	fetch('./dummy-data.json')
+	fetch('./vwdata.json')
 		.then(res => res.json()),
 ])
 	.then(([source, data]) => {
+		const yearTotals = data.children.map(x => x.total).sort((a, b) => a - b);
+		const yearMax = yearTotals[yearTotals.length - 1];
+
+		const monthTotals = data.children[1].children.map(x => x.total).sort((a, b) => a - b);
+		const monthMax = monthTotals[monthTotals.length - 1];
+
+		const addOpacity = (x, max) => Object.assign(x, { opacity: x.total / max });
+
+		data.children.forEach((child, i) => {
+			data.children = data.children.map(year => addOpacity(year, yearMax));
+			child.children = child.children.map(month => addOpacity(month, monthMax));
+		});
+
+		return [source, data];
+	})
+	.then(([source, data]) => {
 		const template = Handlebars.compile(source);
 
-		const oneYear = data.children[2];
-		const oneMonth = oneYear.children[11];
+		Handlebars.registerHelper('abbreviate', (word) => {
+			return typeof word === 'string' ? word.substring(0,3) : word;
+		})
+
+		Handlebars.registerHelper('timestamp', (day, month, year) => {
+			let date = new Date(year, month)
+			return date.toLocaleString('en-US', { day: "numeric", month: "long", year: "numeric" })
+
+		});
+
 		document.querySelector('.container').innerHTML = template(data);
 
-		// const script = document.createElement('script');
-		// script.src = '../main.js';
-		// document.head.appendChild(script);
-
-///------
-
-	addClickEvent(data);
-
-	function addClickEvent (data) {
-		const segments = document.querySelectorAll('.heatmap-segment');
-		for (var i = 0; i < segments.length; i++) {
-			if (!data.children) return;
-			let childData = data.children[i]
-			segments[i].addEventListener('click', () => {
-				expandSegments(childData)
-			});
-		}
-	}
-
-	function expandSegments (data) {
-		console.log(data);
-		document.querySelector('.container').innerHTML = template(data);
-		addClickEvent(data);
-	}
-
+		const script = document.createElement('script');
+		script.src = '../main.js';
+		document.head.appendChild(script);
 });

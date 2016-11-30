@@ -1,24 +1,26 @@
-<div class="zoom">
+<div class="zoom o-typography-aside__body--small">
 	Tap to zoom into years
 </div>
 
-<div class="totalz">
+<div class="total-stories o-typography-aside__body--small">
 	{{total}} stories total
 </div>
 
+
 <div class="timeline">
+  <div class="back" style="display:none;">◀◀</div>
 	{{#if children}}
 		{{#each children}}
 		<div class="timeline-element">
-			<div class="heatmap-segment" style="opacity: 0.{{total}};"></div>
-				<p>{{name}}</p>
+			<div class="heatmap-segment" style="opacity: {{opacity}};"></div>
+				<p class="segment-name o-typography-aside__body--small">{{abbreviate name}}</p>
 		</div>
 		{{/each}}
 	{{else}}
-    <div class="timeline-element">
-      <div class="heatmap-segment" style="opactiy: 0.{{total}};"></div>
-        <p> {{name}} </p>
-    </div>
+	<div class="timeline-element">
+	  <div class="heatmap-segment" style="opacity: {{opacity}};"></div>
+		<p class="segment-name o-typography-lead--small"> {{name}} </p>
+	</div>
 	{{/if}}
 </div>
 
@@ -26,8 +28,10 @@
 	<!-- Most popular stories in {{children.name}} -->
 	<ul>
 		{{#each relevantArticles}}
-		<li class="article">{{title}}</li>
-		{{month}}, {{year}}
+		<li class="article o-typography-aside__headline--small">{{title}}</li>
+		<p class="o-typography-timestamp">
+	  {{timestamp day month year}}
+		</p>
 		{{/each}}
 	</ul>
 </div>

@@ -1,32 +1,29 @@
-const yearBoxes = document.querySelectorAll('.year__heatmap-element');
+Promise.all([fetch('../templates/main.html')
+	.then(res => res.text()),
+fetch('./dummy-data.json')
+	.then(res => res.json())
+])
+	.then(([source, data]) => {
 
-for (var i = 0; i < yearBoxes.length; i++) {
-	console.log('hackathon');
-	var currentYearBox = yearBoxes[i];
-	console.log('THIS THING', currentYearBox);
-	currentYearBox.addEventListener('click', yearBoxClickHandler);
-}
+		let template = Handlebars.compile(source)
 
-function yearBoxClickHandler (event) {
-	const year = event.target.dataset.year;
-	console.log(year);
-	const monthsData = getMonthsData(year);
+		const yearBoxes = document.querySelectorAll('.heatmap-segment');
 
-	// repopulate the timeline with the months of the selected year
-	repopulateTimeline(monthsData);
+		for (var i = 0; i < yearBoxes.length; i++) {
+			var currentYearBox = yearBoxes[i];
+			console.log('THIS THING', currentYearBox);
+			currentYearBox.addEventListener('click', yearBoxClickHandler);
+		}
+		//
+		function yearBoxClickHandler (event) {
+			const year = event.target.dataset.year;
+			console.log(year);
+			renderMonth(year)
+		}
 
-	// repopulate the most popular stories list
-	repopulateStories(year);
-}
 
-function getMonthsData (year) {
+		function renderMonth (mIndex) {
+			document.querySelector('.supa-test').innerHTML = template(data.children[2].children[mIndex]);
+		}
 
-}
-
-function repopulateTimeline (timeUnits) {
-
-}
-
-function repopulateStories (timeUnit) {
-
-}
+	})

@@ -3,27 +3,40 @@ Promise.all([fetch('../templates/main.html')
 fetch('./dummy-data.json')
 	.then(res => res.json())
 ])
-	.then(([source, data]) => {
+	.then(([source, initialData]) => {
+		const template = Handlebars.compile(source);
+		const segments = document.getElementsByClassName('heatmap-segment');
+		const back = document.getElementsByClassName('back')
 
-		let template = Handlebars.compile(source)
+		console.log(back);
+		addClickEvent(initialData);
 
-		const yearBoxes = document.querySelectorAll('.heatmap-segment');
+		function addClickEvent (data) {
+			// const back = document.querySelector('.back');
+			back[0].style.display = data === initialData ? 'none' : '';
 
-		for (var i = 0; i < yearBoxes.length; i++) {
-			var currentYearBox = yearBoxes[i];
-			console.log('THIS THING', currentYearBox);
-			currentYearBox.addEventListener('click', yearBoxClickHandler);
+			for (var i = 0; i < segments.length; i++) {
+				if (!data.children) return;
+
+				let childData = data.children[i]
+				segments[i].addEventListener('click', () => {
+					expandSegments(childData)
+					setBackButton(data)
+				});
+			}
 		}
-		//
-		function yearBoxClickHandler (event) {
-			const year = event.target.dataset.year;
-			console.log(year);
-			renderMonth(year)
+
+		function expandSegments (data) {
+			document.querySelector('.container').innerHTML = template(data);
+			addClickEvent(data);
 		}
 
+		function setBackButton (data) {
+			// const back = document.querySelector('.back');
 
-		function renderMonth (mIndex) {
-			document.querySelector('.supa-test').innerHTML = template(data.children[2].children[mIndex]);
+			back[0].addEventListener('click', () => {
+				expandSegments(data);
+				data === initialData ? setBackButton(data) : setBackButton(initialData)
+			})
 		}
-
 	})

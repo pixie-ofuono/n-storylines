@@ -1,6 +1,6 @@
 Promise.all([fetch('../templates/main.html')
 	.then(res => res.text()),
-fetch('./dummy-data.json')
+fetch('./vwdata.json')
 	.then(res => res.json())
 ])
 	.then(([source, initialData]) => {

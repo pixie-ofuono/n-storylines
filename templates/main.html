@@ -12,13 +12,13 @@
 	{{#if children}}
 		{{#each children}}
 		<div class="timeline-element">
-			<div class="heatmap-segment" style="opacity: 0.{{total}};"></div>
-				<p>{{name}}</p>
+			<div class="heatmap-segment" style="opacity: {{opacity total}};"></div>
+				<p>{{abbreviate name}}</p>
 		</div>
 		{{/each}}
 	{{else}}
     <div class="timeline-element">
-      <div class="heatmap-segment" style="opactiy: 0.{{total}};"></div>
+      <div class="heatmap-segment" style="opacity: {{opacity total}};"></div>
         <p> {{name}} </p>
     </div>
 	{{/if}}

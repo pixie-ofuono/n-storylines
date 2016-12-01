@@ -32,6 +32,13 @@ Promise.all([
 			return date.toLocaleString('en-US', { day: "numeric", month: "long", year: "numeric" });
 		});
 
+		Handlebars.registerHelper('link', (article) => {
+			let url = Handlebars.escapeExpression(`https://www.ft.com/content/${article.id}`);
+			let title = Handlebars.escapeExpression(article.title)
+
+			return new Handlebars.SafeString(`<a href= ${url}>${title}</a>`)
+		})
+
 		document.body.innerHTML = template(data);
 
 		const script = document.createElement('script');

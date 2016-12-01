@@ -8,7 +8,7 @@
 	</div>
 
 	<div class="n-storylines__timeline-container">
-		<img class="n-storylines__back-btn" src="http://image.webservices.ft.com/v1/images/raw/fticon-v1:arrow-left?source=www.ft.com"/>
+		<img class="n-storylines__back-btn" src="http://image.webservices.ft.com/v1/images/raw/fticon-v1:arrow-left?source=o-icons"/>
 		{{#if children}}
 		{{#each children}}
 		<div class="n-storylines__heatmap-segment">
@@ -26,10 +26,10 @@
 
 	<ul class="n-storylines__top-content">
 		{{#each relevantArticles}}
-		<li class="o-typography-aside__headline--small">{{title}}</li>
-		<p class="o-typography-timestamp">
-			{{timestamp day month year}}
-		</p>
+		<li class="n-storylines__article o-typography-aside__headline--small">
+      {{link this}}
+		  <p class="o-typography-timestamp">{{timestamp day month year}}</p>
+    </li>
 		{{/each}}
 	</ul>
 </div>

@@ -8,7 +8,7 @@
 	</div>
 
 	<div class="n-storylines__timeline-container">
-		<div class="n-storylines__back-btn">◀◀</div>
+		<img class="n-storylines__back-btn" src="http://image.webservices.ft.com/v1/images/raw/fticon-v1:arrow-left?source=www.ft.com"/>
 		{{#if children}}
 		{{#each children}}
 		<div class="n-storylines__heatmap-segment">
@@ -19,7 +19,7 @@
 		{{else}}
 		<div class="n-storylines__heatmap-segment">
 			<div class="n-storylines__heatmap-segment-colour" style="opacity: {{opacity}};"></div>
-			<p class="n-storylines__heatmap-segment-name o-typography-lead--small">{{name}}</p>
+			<p class="n-storylines__heatmap-segment-name o-typography-aside__body--small">{{name}}</p>
 		</div>
 		{{/if}}
 	</div>

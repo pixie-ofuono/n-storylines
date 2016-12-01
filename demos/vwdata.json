@@ -1,5 +1,26 @@
 {
-    "relevantArticles": [],
+    "relevantArticles": [{
+        "views": 211484,
+        "id": "970e54f8-6048-11e5-9846-de406ccb37f2",
+        "title": "VW emission test cheating rocks Europe’s carmakers",
+        "day": 8,
+        "month": 8,
+        "year": 2015
+    }, {
+        "views": 28274,
+        "id": "028c2eaa-668c-11e5-a57f-21b88f7d973f",
+        "title": "VW chief Matthias Müller pledges fix for emissions faults",
+        "day": 8,
+        "month": 8,
+        "year": 2015
+    }, {
+        "views": 27348,
+        "id": "41b1a0d6-65f8-11e5-97d0-1456a776a4f5",
+        "title": "Poor governance is big clue for investors",
+        "day": 8,
+        "month": 8,
+        "year": 2015
+    }],
     "total": 183,
     "children": [{
         "name": 2015,

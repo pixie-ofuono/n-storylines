@@ -1,6 +1,6 @@
 Promise.all([
 	fetch('../templates/main.html').then(res => res.text()),
-	fetch('./vwdata.json').then(res => res.json()).then(opacity)
+	fetch('./N2FkZjRhMWUtZDZjNS00ZTQ0LTg1MTMtMjYyYzBlODkzYTQ2-UE4=.json').then(res => res.json())
 ])
 	.then(([source, initialData]) => {
 		const template = Handlebars.compile(source);
@@ -34,23 +34,3 @@ Promise.all([
 			});
 		}
 	});
-
-function opacity (data) {
-	const yearlyTotals = data.children.map(x => x.total);
-	const monthlyTotals = [].concat(
-		...data.children.map(x => x.children.map(x => x.total))
-	);
-
-	const addOpacity = (element, range) => {
-		const opacity = element.total / Math.max(...range);
-		return Object.assign({}, element, { opacity });
-	};
-
-	const opaqueChildren = data.children.map(year => {
-		const result = addOpacity(year, yearlyTotals);
-		result.children = year.children.map(month => addOpacity(month, monthlyTotals));
-		return result;
-	});
-
-	return Object.assign({}, data, { children: opaqueChildren });
-}

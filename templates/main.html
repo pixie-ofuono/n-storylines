@@ -12,13 +12,13 @@
 		{{#if children}}
 		{{#each children}}
 		<div class="n-storylines__heatmap-segment">
-			<div class="n-storylines__heatmap-segment-colour" style="opacity: {{opacity}};"></div>
+			<div class="n-storylines__heatmap-segment-colour" style="opacity: {{weight}};"></div>
 			<p class="n-storylines__heatmap-segment-name o-typography-aside__body--small">{{abbreviate name}}</p>
 		</div>
 		{{/each}}
 		{{else}}
 		<div class="n-storylines__heatmap-segment">
-			<div class="n-storylines__heatmap-segment-colour" style="opacity: {{opacity}};"></div>
+			<div class="n-storylines__heatmap-segment-colour" style="opacity: {{weight}};"></div>
 			<p class="n-storylines__heatmap-segment-name o-typography-aside__body--small">{{name}}</p>
 		</div>
 		{{/if}}

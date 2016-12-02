@@ -1,37 +1,101 @@
 body {
-  font-family: monospace;
   background: #fff1e0;
 }
 
-.timeline {
+.n-storylines__timeline-container {
   display: flex;
-  /*background: #fff;*/
   width: 100%;
   padding-top: 10px;
 }
 
-.timeline-element {
+.n-storylines__heatmap-segment {
   width: 100%;
 }
-.heatmap-segment {
+
+.n-storylines__heatmap-segment-colour {
   background: #B11F42;
-  /*border: 1px solid white;*/
   width: 100%;
-  height: 20px;
+  height: 30px;
+}
+.n-storylines__heatmap-segment-name {
+  text-align: center;
 }
 .segment-name {
   text-align: center
 }
 
-.article {
-  list-style-type: none;
+.n-storylines__top-content {
+    counter-reset: list;
+    list-style-type: none;
+    width: 80%;
 }
 
+.n-storylines__article {
+  position:relative;
+  padding-left: 20px;
+  margin-bottom: 25px;
+}
 
-.zoom {
+.n-storylines__article:before {
+  counter-increment: list;
+  content: counter(list);
+  position: absolute;
+  font: 12px/13px MetricWeb, sans-serif;
+  color: #fff;
+  left: -13px;
+  top: 10px;
+  text-align: center;
+
+  background-color: #333;
+  border-radius: 13px;
+  height: 13px;
+  width: 13px;
+  padding: 5px;
+}
+
+.n-storylines__article {
+
+}
+
+.n-storylines__info {
   float: left;
+  margin-bottom: 18px;
 }
 
-.total-stories {
-  float: right
+.n-storylines__content-count {
+  float: left;
+  margin-bottom: 15px;
+}
+
+hr {
+  border: 0;
+  height: 0;
+  border-top: 1px solid #fff1e0;
+  border-bottom: 1px solid #999;
+  width: 100%;
+}
+
+span {
+  font-weight: 600;
+}
+
+li>.o-typography-timestamp {
+  margin: 5px 0;
+}
+/*having doubts about how to approach the a tag*/
+
+.n-storylines__article>a {
+  text-decoration: none;
+  color: #505050;
+}
+
+a:hover {
+  cursor: pointer;
+  color: #777;
+}
+
+
+.n-storylines__back-btn {
+  width: 1.5em;
+  height: 1.5em;
 }

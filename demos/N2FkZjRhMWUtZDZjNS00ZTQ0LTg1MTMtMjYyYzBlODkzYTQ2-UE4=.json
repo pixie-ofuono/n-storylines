@@ -1,10 +1,22 @@
 {
     "total": 598,
     "relevantArticles": [{
+        "id": "3c9e2bd6-c639-11e5-808f-8231cd71622e",
+        "title": "Federal Reserve: Credibility on the line",
+        "day": 29,
+        "month": 0,
+        "year": 2016
+    }, {
         "id": "7271d02e-12eb-11e6-91da-096d89bd2173",
         "title": "Trump raises prospect of replacing Yellen",
         "day": 5,
         "month": 4,
+        "year": 2016
+    }, {
+        "id": "f8fbc3a2-3a28-11e6-a780-b48ed7b6126f",
+        "title": "Fed on alert for US economic recoil ",
+        "day": 24,
+        "month": 5,
         "year": 2016
     }, {
         "id": "309aecce-835e-11e6-8897-2359a58ac7a5",
@@ -110,25 +122,49 @@
                 "day": 17,
                 "month": 11,
                 "year": 2014
+            }, {
+                "id": "4f6cc022-9cf2-3f56-91cd-e04bc4cadd03",
+                "title": "Reminder: US Markets Live, special FOMC presser edition",
+                "day": 17,
+                "month": 11,
+                "year": 2014
+            }, {
+                "id": "d7652586-861e-11e4-b248-00144feabdc0",
+                "title": "Fed signals tightening by mid-2015",
+                "day": 17,
+                "month": 11,
+                "year": 2014
             }],
             "weight": 0.12857142857142856
         }],
         "relevantArticles": [{
+            "id": "ca82c3ea-55d8-3a87-9a37-00c1690b4f97",
+            "title": "The loneliness of a central banker",
+            "day": 8,
+            "month": 10,
+            "year": 2014
+        }, {
+            "id": "53510a62-76d3-11e4-8273-00144feabdc0",
+            "title": "Grading the Federal Reserve’s readability",
+            "day": 28,
+            "month": 10,
+            "year": 2014
+        }, {
             "id": "70d11c98-8570-11e4-ab4e-00144feabdc0",
             "title": "Fed meeting may add to pressure on emerging markets",
             "day": 17,
             "month": 11,
             "year": 2014
         }, {
-            "id": "660df1d0-86da-11e4-8a51-00144feabdc0",
-            "title": "The January effect after the Santa rally ",
-            "day": 18,
-            "month": 11,
-            "year": 2014
-        }, {
             "id": "996581b4-878f-11e4-bc7c-00144feabdc0",
             "title": "Hawkish Fed signals buoy the dollar",
             "day": 19,
+            "month": 11,
+            "year": 2014
+        }, {
+            "id": "244c7bbc-8988-11e4-ad5b-00144feabdc0",
+            "title": "Wall Street extends run of gains",
+            "day": 22,
             "month": 11,
             "year": 2014
         }],
@@ -157,12 +193,36 @@
                 "day": 9,
                 "month": 0,
                 "year": 2015
+            }, {
+                "id": "f95d24d4-a31c-11e4-9c06-00144feab7de",
+                "title": "Wage rise puzzle tests the Federal Reserve",
+                "day": 25,
+                "month": 0,
+                "year": 2015
+            }, {
+                "id": "96aca7be-a796-11e4-8e78-00144feab7de",
+                "title": "It’s the season for a stronger yen",
+                "day": 29,
+                "month": 0,
+                "year": 2015
             }],
             "weight": 0.07142857142857142
         }, {
             "name": "February",
             "total": 21,
             "relevantArticles": [{
+                "id": "7a69c556-ba7d-11e4-945d-00144feab7de",
+                "title": "Yellen’s problem with US felons",
+                "day": 22,
+                "month": 1,
+                "year": 2015
+            }, {
+                "id": "690fcd94-ba4d-11e4-933f-00144feab7de",
+                "title": "Yellen faces interest rates language test",
+                "day": 22,
+                "month": 1,
+                "year": 2015
+            }, {
                 "id": "8fd913e6-bbd2-11e4-aa71-00144feab7de",
                 "title": "S&P 500 hits record after Yellen remarks",
                 "day": 24,
@@ -192,6 +252,18 @@
                 "month": 2,
                 "year": 2015
             }, {
+                "id": "b2bbbe54-ce51-11e4-900c-00144feab7de",
+                "title": "BofA under pressure to defend structure",
+                "day": 19,
+                "month": 2,
+                "year": 2015
+            }, {
+                "id": "64dde7b2-ce0f-11e4-9712-00144feab7de",
+                "title": "Yellen battles Draghi in euro-dollar drama",
+                "day": 19,
+                "month": 2,
+                "year": 2015
+            }, {
                 "id": "49e49f66-cef3-11e4-b761-00144feab7de",
                 "title": "Exchange rates: Transatlantic divergence",
                 "day": 22,
@@ -209,15 +281,27 @@
             "name": "April",
             "total": 8,
             "relevantArticles": [{
-                "id": "ca215120-da00-11e4-9b1c-00144feab7de",
-                "title": "US companies cut back sharply on hiring",
+                "id": "271649d2-da1d-11e4-9b1c-00144feab7de",
+                "title": "A June rate rise can now surely be ruled out",
                 "day": 3,
                 "month": 3,
                 "year": 2015
             }, {
-                "id": "271649d2-da1d-11e4-9b1c-00144feab7de",
-                "title": "A June rate rise can now surely be ruled out",
-                "day": 3,
+                "id": "d57644fe-dcbc-11e4-b70d-00144feab7de",
+                "title": "Wall Street wary of ‘audit the Fed’ campaign",
+                "day": 7,
+                "month": 3,
+                "year": 2015
+            }, {
+                "id": "b3727427-d141-313c-851d-94d63ed2aec5",
+                "title": "Who is right about the equilibrium interest rate?",
+                "day": 12,
+                "month": 3,
+                "year": 2015
+            }, {
+                "id": "f5f66eae-e2c8-11e4-aa1d-00144feab7de",
+                "title": "Dollar bulls exude patience and wait for sunny data ",
+                "day": 15,
                 "month": 3,
                 "year": 2015
             }, {
@@ -232,6 +316,18 @@
             "name": "May",
             "total": 13,
             "relevantArticles": [{
+                "id": "e25ace00-f400-11e4-bd16-00144feab7de",
+                "title": "Crude jump speeds up bond sell-off",
+                "day": 6,
+                "month": 4,
+                "year": 2015
+            }, {
+                "id": "62f31820-f40f-11e4-99de-00144feab7de",
+                "title": "Share prices ‘quite high’, says Yellen",
+                "day": 6,
+                "month": 4,
+                "year": 2015
+            }, {
                 "id": "29a815da-00a2-11e5-a8e0-00144feabdc0",
                 "title": "Janet Yellen expects US economy to strengthen",
                 "day": 22,
@@ -255,6 +351,12 @@
             "name": "June",
             "total": 12,
             "relevantArticles": [{
+                "id": "edd427ba-137a-11e5-aa7f-00144feabdc0",
+                "title": "Yellen’s market-moving power on show",
+                "day": 16,
+                "month": 5,
+                "year": 2015
+            }, {
                 "id": "6179fdda-1519-11e5-a587-00144feabdc0",
                 "title": "Yellen points to gradual rate rises",
                 "day": 17,
@@ -263,6 +365,12 @@
             }, {
                 "id": "4d30daa8-1422-11e5-9bc5-00144feabdc0",
                 "title": "A bloated US Federal Reserve prepares to shape up",
+                "day": 18,
+                "month": 5,
+                "year": 2015
+            }, {
+                "id": "17d1867a-156f-11e5-9509-00144feabdc0",
+                "title": "‘Gradual’ is the word as Yellen seeks to assuage markets",
                 "day": 18,
                 "month": 5,
                 "year": 2015
@@ -278,9 +386,21 @@
             "name": "July",
             "total": 35,
             "relevantArticles": [{
-                "id": "72759f3c-2a35-11e5-8613-e7aedbb7bdb7",
-                "title": "Fed risks repeat of rate rise mistakes",
+                "id": "d33c5c6e-24ab-11e5-bd83-71cb60e8f08c",
+                "title": "Dollar rise threatens US growth and emerging markets, IMF warns",
+                "day": 7,
+                "month": 6,
+                "year": 2015
+            }, {
+                "id": "d610e708-2aea-11e5-acfb-cbd2e1c81cca",
+                "title": "Fed says US economy favours 2015 rate rise",
                 "day": 15,
+                "month": 6,
+                "year": 2015
+            }, {
+                "id": "8a49160e-323f-11e5-8873-775ba7c2ea3d",
+                "title": "Fed accidentally releases staff forecasts",
+                "day": 24,
                 "month": 6,
                 "year": 2015
             }, {
@@ -335,6 +455,18 @@
                 "day": 18,
                 "month": 8,
                 "year": 2015
+            }, {
+                "id": "9662eb92-5dad-11e5-9846-de406ccb37f2",
+                "title": "Stocks unsettled by dovish Fed statement",
+                "day": 18,
+                "month": 8,
+                "year": 2015
+            }, {
+                "id": "d321a63a-62f4-11e5-9846-de406ccb37f2",
+                "title": "Janet Yellen reiterates expectations of 2015 rate rise",
+                "day": 24,
+                "month": 8,
+                "year": 2015
             }],
             "weight": 0.45714285714285713
         }, {
@@ -347,8 +479,20 @@
                 "month": 9,
                 "year": 2015
             }, {
+                "id": "fc025384-735b-11e5-a129-3fcc4f641d98",
+                "title": "Investors lurch backwards on US rate rise expectations ",
+                "day": 15,
+                "month": 9,
+                "year": 2015
+            }, {
                 "id": "740a87a2-7d98-11e5-98fb-5a6d4728f74e",
                 "title": "Federal Reserve drops warnings on global risks to US economy",
+                "day": 28,
+                "month": 9,
+                "year": 2015
+            }, {
+                "id": "1f53b134-7ac8-11e5-98fb-5a6d4728f74e",
+                "title": "US interest rates likely to remain unchanged as Fed decision looms",
                 "day": 28,
                 "month": 9,
                 "year": 2015
@@ -376,9 +520,21 @@
                 "month": 10,
                 "year": 2015
             }, {
+                "id": "2220c87c-83f9-11e5-8e80-1574112844fd",
+                "title": "What to watch in the US jobs report",
+                "day": 5,
+                "month": 10,
+                "year": 2015
+            }, {
                 "id": "570dc4c0-84a0-11e5-8e80-1574112844fd",
                 "title": "Fed debate shifts to pace of rate lift-off",
                 "day": 6,
+                "month": 10,
+                "year": 2015
+            }, {
+                "id": "f73c956e-8c72-11e5-a549-b89a1dfede9b",
+                "title": "Fed faces the risk of waiting too long",
+                "day": 16,
                 "month": 10,
                 "year": 2015
             }],
@@ -390,6 +546,18 @@
                 "id": "4ee01586-9919-11e5-9228-87e603d47bdc",
                 "title": "Yellen lays ground for interest rate rise",
                 "day": 2,
+                "month": 11,
+                "year": 2015
+            }, {
+                "id": "755a7cf6-9c34-11e5-b45d-4812f209f861",
+                "title": "Central bankers do not have as many tools as they think",
+                "day": 6,
+                "month": 11,
+                "year": 2015
+            }, {
+                "id": "dec41b70-9a7c-11e5-a5c1-ca5db4add713",
+                "title": "The challenges of central bank divergence",
+                "day": 8,
                 "month": 11,
                 "year": 2015
             }, {
@@ -408,16 +576,28 @@
             "weight": 0.8571428571428571
         }],
         "relevantArticles": [{
-            "id": "e7475446-bc34-11e4-b6ec-00144feab7de",
-            "title": "Fed paves way to raise rates this year as US economy strengthens",
-            "day": 24,
-            "month": 1,
+            "id": "89c3c7ce-9276-11e4-b213-00144feabdc0",
+            "title": "US should enjoy afternoon sunshine while it lasts",
+            "day": 4,
+            "month": 0,
             "year": 2015
         }, {
-            "id": "ae8ddc82-cd92-11e4-8760-00144feab7de",
-            "title": "US Fed frees its hand to raise rates",
-            "day": 19,
-            "month": 2,
+            "id": "ca215120-da00-11e4-9b1c-00144feab7de",
+            "title": "US companies cut back sharply on hiring",
+            "day": 3,
+            "month": 3,
+            "year": 2015
+        }, {
+            "id": "6179fdda-1519-11e5-a587-00144feabdc0",
+            "title": "Yellen points to gradual rate rises",
+            "day": 17,
+            "month": 5,
+            "year": 2015
+        }, {
+            "id": "72759f3c-2a35-11e5-8613-e7aedbb7bdb7",
+            "title": "Fed risks repeat of rate rise mistakes",
+            "day": 15,
+            "month": 6,
             "year": 2015
         }, {
             "id": "b7f719ec-9965-11e5-9228-87e603d47bdc",
@@ -434,6 +614,12 @@
             "name": "January",
             "total": 15,
             "relevantArticles": [{
+                "id": "e7b266b6-b4a7-11e5-b147-e5e5bba42e51",
+                "title": "Fed concerns remain over low inflation",
+                "day": 6,
+                "month": 0,
+                "year": 2016
+            }, {
                 "id": "7562d1dc-bbb3-11e5-bf7e-8a339b6f2164",
                 "title": "Fed battled internal fears of dollar impact from QE",
                 "day": 15,
@@ -442,6 +628,12 @@
             }, {
                 "id": "119218d6-c39f-11e5-b3b1-7b2481276e45",
                 "title": "Fed risks looking out of step on rates ahead of first 2016 meeting",
+                "day": 26,
+                "month": 0,
+                "year": 2016
+            }, {
+                "id": "e6c52798-c38e-11e5-b3b1-7b2481276e45",
+                "title": "Waiting for Janet — currencies market in thrall to Fed",
                 "day": 26,
                 "month": 0,
                 "year": 2016
@@ -463,15 +655,27 @@
                 "month": 1,
                 "year": 2016
             }, {
-                "id": "55337e50-d069-11e5-831d-09f7778e7377",
-                "title": "Global stocks on verge of bear market",
+                "id": "6d3be72e-d0c5-11e5-831d-09f7778e7377",
+                "title": "Rush for havens as market turmoil intensifies",
                 "day": 11,
                 "month": 1,
                 "year": 2016
             }, {
-                "id": "6d3be72e-d0c5-11e5-831d-09f7778e7377",
-                "title": "Rush for havens as market turmoil intensifies",
-                "day": 11,
+                "id": "3fe8f99c-d1ab-11e5-92a1-c5e23ef99c77",
+                "title": "Banks listen in to traders’ phone calls",
+                "day": 12,
+                "month": 1,
+                "year": 2016
+            }, {
+                "id": "45eefbfc-d183-11e5-92a1-c5e23ef99c77",
+                "title": "Bear markets: playing dead not an option",
+                "day": 12,
+                "month": 1,
+                "year": 2016
+            }, {
+                "id": "9ee4474e-d59d-11e5-8887-98e7feb46f27",
+                "title": "Fed eyes increased risks for US economy",
+                "day": 17,
                 "month": 1,
                 "year": 2016
             }],
@@ -480,6 +684,12 @@
             "name": "March",
             "total": 53,
             "relevantArticles": [{
+                "id": "88898858-eac7-11e5-bb79-2303682345c8",
+                "title": "US banking industry body calls for rate rises",
+                "day": 15,
+                "month": 2,
+                "year": 2016
+            }, {
                 "id": "0c21c652-f5c8-11e5-96db-fc683b5e52db",
                 "title": "Janet Yellen reiterates need for interest rates caution ",
                 "day": 29,
@@ -488,6 +698,12 @@
             }, {
                 "id": "be5c9074-f61b-11e5-803c-d27c7117d132",
                 "title": "Dovish Yellen sends S&P 500 to 2016 high",
+                "day": 30,
+                "month": 2,
+                "year": 2016
+            }, {
+                "id": "4040795a-f600-11e5-803c-d27c7117d132",
+                "title": "Big tests lie ahead after Yellen speech",
                 "day": 30,
                 "month": 2,
                 "year": 2016
@@ -520,12 +736,36 @@
                 "day": 8,
                 "month": 3,
                 "year": 2016
+            }, {
+                "id": "3d84a982-0296-11e6-af1d-c47326021344",
+                "title": "Bond sale sees scramble for long-dated debt",
+                "day": 15,
+                "month": 3,
+                "year": 2016
+            }, {
+                "id": "9c60268e-0b9c-11e6-b0f1-61f222853ff3",
+                "title": "Dollar stirs in currency jungle ready for a sustained run",
+                "day": 26,
+                "month": 3,
+                "year": 2016
             }],
             "weight": 0.4
         }, {
             "name": "May",
             "total": 34,
             "relevantArticles": [{
+                "id": "f18e3f7a-11f4-11e6-91da-096d89bd2173",
+                "title": "Janet Yellen drives the currency bus as dollar dives",
+                "day": 4,
+                "month": 4,
+                "year": 2016
+            }, {
+                "id": "ed52e468-1c46-11e6-b286-cddde55ca122",
+                "title": "Markets underestimate chance of June rate rise, says Fed official",
+                "day": 17,
+                "month": 4,
+                "year": 2016
+            }, {
                 "id": "9b07a42e-1d35-11e6-a7bc-ee846770ec15",
                 "title": "Fed puts investors on notice over rates",
                 "day": 19,
@@ -558,6 +798,18 @@
                 "id": "a62fe776-2c03-11e6-a18d-a96ab29e3c95",
                 "title": "Yellen voices concern on weak jobs data",
                 "day": 6,
+                "month": 5,
+                "year": 2016
+            }, {
+                "id": "a79e7e78-2d26-11e6-bf8d-26294ad519fc",
+                "title": "S&P 500 edges closer towards record high",
+                "day": 8,
+                "month": 5,
+                "year": 2016
+            }, {
+                "id": "1447cf6e-37b5-11e6-a780-b48ed7b6126f",
+                "title": "Yellen warns of ‘considerable uncertainty’",
+                "day": 21,
                 "month": 5,
                 "year": 2016
             }, {
@@ -595,6 +847,18 @@
             "name": "August",
             "total": 70,
             "relevantArticles": [{
+                "id": "206a5078-65f0-11e6-8310-ecf0bddad227",
+                "title": "Weaker dollar gives Janet Yellen an opening at Jackson Hole",
+                "day": 19,
+                "month": 7,
+                "year": 2016
+            }, {
+                "id": "27b0e5c0-661a-11e6-8310-ecf0bddad227",
+                "title": "Expected rise in euro spells grief for ECB and exporters",
+                "day": 21,
+                "month": 7,
+                "year": 2016
+            }, {
                 "id": "2209520e-6860-11e6-a0b1-d87a9fea034f",
                 "title": "Negative interest rates are not the drama they seem   ",
                 "day": 23,
@@ -624,9 +888,21 @@
                 "month": 8,
                 "year": 2016
             }, {
+                "id": "7dc78be4-78d5-11e6-a0c6-39e2633162d5",
+                "title": "Monetary policy in a low-rate world",
+                "day": 13,
+                "month": 8,
+                "year": 2016
+            }, {
                 "id": "cb0f4316-8022-11e6-8e50-8ec15fb462f4",
                 "title": "Federal Reserve sets stage for 2016 US interest rate rise",
                 "day": 21,
+                "month": 8,
+                "year": 2016
+            }, {
+                "id": "d172785c-80bf-11e6-8e50-8ec15fb462f4",
+                "title": "Doves ascendant in Janet Yellen’s Federal Reserve",
+                "day": 22,
                 "month": 8,
                 "year": 2016
             }, {
@@ -641,9 +917,9 @@
             "name": "October",
             "total": 8,
             "relevantArticles": [{
-                "id": "01734584-8a27-11e6-8aa5-f79f5696c731",
-                "title": "Trump’s mudslinging puts the Fed in danger",
-                "day": 4,
+                "id": "aed043d2-8c87-11e6-8cb7-e7ada1d123b1",
+                "title": "US jobless rise shows more seeking work",
+                "day": 7,
                 "month": 9,
                 "year": 2016
             }, {
@@ -653,8 +929,20 @@
                 "month": 9,
                 "year": 2016
             }, {
+                "id": "c9da2c84-90a0-11e6-8df8-d3778b55a923",
+                "title": "Fed minutes show holding rates was close call",
+                "day": 12,
+                "month": 9,
+                "year": 2016
+            }, {
                 "id": "65d7fb78-9233-11e6-8df8-d3778b55a923",
                 "title": "Yellen says swift action needed during periods of upheaval",
+                "day": 14,
+                "month": 9,
+                "year": 2016
+            }, {
+                "id": "10cdc732-0003-3cca-95b6-3f6d73baec28",
+                "title": "US stocks tick up after Yellen remarks; dollar slips",
                 "day": 14,
                 "month": 9,
                 "year": 2016
@@ -664,21 +952,33 @@
             "name": "November",
             "total": 12,
             "relevantArticles": [{
+                "id": "4cadd6d0-a03f-11e6-891e-abe238dee8e2",
+                "title": "Janet Yellen clings to caution in face of stronger growth",
+                "day": 1,
+                "month": 10,
+                "year": 2016
+            }, {
+                "id": "4821b22a-a126-11e6-891e-abe238dee8e2",
+                "title": "Fed flags US rate rise as early as December",
+                "day": 2,
+                "month": 10,
+                "year": 2016
+            }, {
                 "id": "81ccb764-a698-11e6-8b69-02899e8bd9d1",
                 "title": "Fed faces Trump glare ahead of policy shake-up",
                 "day": 9,
                 "month": 10,
                 "year": 2016
             }, {
-                "id": "607fef40-a72e-11e6-8898-79a99e2a4de6",
-                "title": "Prepare for a reversal of monetary rule under President Trump",
+                "id": "b5b78c76-a769-11e6-8898-79a99e2a4de6",
+                "title": "Trump’s economic policy explained: the era of fiscal restraint is over",
                 "day": 10,
                 "month": 10,
                 "year": 2016
             }, {
-                "id": "b5b78c76-a769-11e6-8898-79a99e2a4de6",
-                "title": "Trump’s economic policy explained: the era of fiscal restraint is over",
-                "day": 10,
+                "id": "74432c46-acbe-11e6-9cb3-bb8207902122",
+                "title": "Fed chief Yellen stands by central bank independence",
+                "day": 17,
                 "month": 10,
                 "year": 2016
             }],
@@ -690,10 +990,10 @@
             "weight": 0
         }],
         "relevantArticles": [{
-            "id": "3c9e2bd6-c639-11e5-808f-8231cd71622e",
-            "title": "Federal Reserve: Credibility on the line",
-            "day": 29,
-            "month": 0,
+            "id": "55337e50-d069-11e5-831d-09f7778e7377",
+            "title": "Global stocks on verge of bear market",
+            "day": 11,
+            "month": 1,
             "year": 2016
         }, {
             "id": "7333e92a-d4a2-11e5-829b-8564e7528e54",
@@ -702,10 +1002,22 @@
             "month": 1,
             "year": 2016
         }, {
-            "id": "f8fbc3a2-3a28-11e6-a780-b48ed7b6126f",
-            "title": "Fed on alert for US economic recoil ",
-            "day": 24,
-            "month": 5,
+            "id": "01734584-8a27-11e6-8aa5-f79f5696c731",
+            "title": "Trump’s mudslinging puts the Fed in danger",
+            "day": 4,
+            "month": 9,
+            "year": 2016
+        }, {
+            "id": "81ccb764-a698-11e6-8b69-02899e8bd9d1",
+            "title": "Fed faces Trump glare ahead of policy shake-up",
+            "day": 9,
+            "month": 10,
+            "year": 2016
+        }, {
+            "id": "607fef40-a72e-11e6-8898-79a99e2a4de6",
+            "title": "Prepare for a reversal of monetary rule under President Trump",
+            "day": 10,
+            "month": 10,
             "year": 2016
         }],
         "weight": 1

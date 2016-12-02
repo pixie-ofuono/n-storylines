@@ -1,10 +1,15 @@
 <div class="n-storylines">
 	<div class="n-storylines__info o-typography-aside__body--small">
-		Tap to zoom into years
+    {{#if children.0.children}}
+		Most popular articles since <span>{{ children.0.name  }}</span>
+    {{else}}
+		Most popular articles in <span>{{name}}</span>
+    {{/if}}
 	</div>
 
+  <hr>
 	<div class="n-storylines__content-count o-typography-aside__body--small">
-		{{total}} stories total
+		{{total}} articles published
 	</div>
 
 	<div class="n-storylines__timeline-container">

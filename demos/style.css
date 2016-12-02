@@ -1,6 +1,7 @@
 body {
-  font-family: monospace;
   background: #fff1e0;
+  width: 90%;
+  margin:  0 auto;
 }
 
 .n-storylines__timeline-container {
@@ -16,20 +17,86 @@ body {
 .n-storylines__heatmap-segment-colour {
   background: #B11F42;
   width: 100%;
-  height: 20px;
+  height: 30px;
 }
 .n-storylines__heatmap-segment-name {
   text-align: center;
 }
+.segment-name {
+  text-align: center
+}
 
 .n-storylines__top-content {
-  list-style-type: none;
+    counter-reset: list;
+    list-style-type: none;
+    width: 80%;
+}
+
+.n-storylines__article {
+  position:relative;
+  padding-left: 20px;
+  margin-bottom: 25px;
+}
+
+.n-storylines__article:before {
+  counter-increment: list;
+  content: counter(list);
+  position: absolute;
+  font: 12px/13px MetricWeb, sans-serif;
+  color: #fff1e0;
+  left: -13px;
+  top: 10px;
+  text-align: center;
+
+  background-color: #333;
+  border-radius: 13px;
+  height: 13px;
+  width: 13px;
+  padding: 5px;
+}
+
+.n-storylines__article {
+
 }
 
 .n-storylines__info {
   float: left;
+  margin-bottom: 18px;
 }
 
 .n-storylines__content-count {
-  float: right;
+  float: left;
+  margin-bottom: 15px;
+}
+
+hr {
+  border: 0;
+  height: 0;
+  border-top: 1px solid #fff1e0;
+  border-bottom: 1px solid #999;
+  width: 100%;
+}
+
+span {
+  font-weight: 600;
+}
+
+.o-typography-timestamp {
+  margin: 5px 0;
+}
+
+.n-storylines__article-link {
+  text-decoration: none;
+  color: #505050;
+}
+
+.n-storylines__article-link:hover {
+  cursor: pointer;
+  color: #777;
+}
+
+
+.n-storylines__back-btn {
+  width: 1.5em;
+  height: 1.5em;
 }

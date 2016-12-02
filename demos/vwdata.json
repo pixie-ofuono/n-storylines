@@ -1,0 +1,468 @@
+{
+    "relevantArticles": [],
+    "total": 183,
+    "children": [{
+        "name": 2015,
+        "total": 85,
+        "children": [{
+            "name": "January",
+            "total": 0,
+            "relevantArticles": []
+        }, {
+            "name": "February",
+            "total": 0,
+            "relevantArticles": []
+        }, {
+            "name": "March",
+            "total": 0,
+            "relevantArticles": []
+        }, {
+            "name": "April",
+            "total": 0,
+            "relevantArticles": []
+        }, {
+            "name": "May",
+            "total": 0,
+            "relevantArticles": []
+        }, {
+            "name": "June",
+            "total": 0,
+            "relevantArticles": []
+        }, {
+            "name": "July",
+            "total": 0,
+            "relevantArticles": []
+        }, {
+            "name": "August",
+            "total": 0,
+            "relevantArticles": []
+        }, {
+            "name": "September",
+            "total": 7,
+            "relevantArticles": [{
+                "views": 211484,
+                "id": "970e54f8-6048-11e5-9846-de406ccb37f2",
+                "title": "VW emission test cheating rocks Europe’s carmakers",
+                "day": 8,
+                "month": 8,
+                "year": 2015
+            }, {
+                "views": 28274,
+                "id": "028c2eaa-668c-11e5-a57f-21b88f7d973f",
+                "title": "VW chief Matthias Müller pledges fix for emissions faults",
+                "day": 8,
+                "month": 8,
+                "year": 2015
+            }, {
+                "views": 27348,
+                "id": "41b1a0d6-65f8-11e5-97d0-1456a776a4f5",
+                "title": "Poor governance is big clue for investors",
+                "day": 8,
+                "month": 8,
+                "year": 2015
+            }]
+        }, {
+            "name": "October",
+            "total": 40,
+            "relevantArticles": [{
+                "views": 69490,
+                "id": "5ae421be-6dcd-11e5-8171-ba1968cf791a",
+                "title": "Volkswagen’s home city enveloped in fear, anger and disbelief",
+                "day": 8,
+                "month": 9,
+                "year": 2015
+            }, {
+                "views": 64568,
+                "id": "9e4a32fa-68d6-11e5-97d0-1456a776a4f5",
+                "title": "EPA extends VW diesel emissions probe to other brands in US",
+                "day": 8,
+                "month": 9,
+                "year": 2015
+            }, {
+                "views": 59932,
+                "id": "24a9c128-6b5a-11e5-8608-a0853fb4e1fe",
+                "title": "Culture clash gives clue to Volkswagen scandal",
+                "day": 8,
+                "month": 9,
+                "year": 2015
+            }]
+        }, {
+            "name": "November",
+            "total": 28,
+            "relevantArticles": [{
+                "views": 143692,
+                "id": "ee578522-91ee-11e5-9e3e-eb48769cecab",
+                "title": "VW admits second illegal device in 85,000 Audi engines",
+                "day": 8,
+                "month": 10,
+                "year": 2015
+            }, {
+                "views": 106384,
+                "id": "aa165e96-818c-11e5-8095-ed1a37d1e096",
+                "title": "Volkswagen emissions scandal spreads to Porsche",
+                "day": 8,
+                "month": 10,
+                "year": 2015
+            }, {
+                "views": 68380,
+                "id": "8e246afa-895e-11e5-90de-f44762bf9896",
+                "title": "VW prepares to buy back cars with emission ‘irregularities’",
+                "day": 8,
+                "month": 10,
+                "year": 2015
+            }]
+        }, {
+            "name": "December",
+            "total": 10,
+            "relevantArticles": [{
+                "views": 59622,
+                "id": "b9f35440-98ed-11e5-bdda-9f13f99fa654",
+                "title": "Volkswagen blunders through communications over emissions scandal",
+                "day": 8,
+                "month": 11,
+                "year": 2015
+            }, {
+                "views": 42530,
+                "id": "2eb3c386-9f25-11e5-beba-5e33e2b79e46",
+                "title": "Volkswagen says ‘mindset’ tolerated rule breaking",
+                "day": 8,
+                "month": 11,
+                "year": 2015
+            }, {
+                "views": 41536,
+                "id": "722174a2-9e6b-11e5-b45d-4812f209f861",
+                "title": "Volkswagen reduces number of cars hit by CO2 errors",
+                "day": 8,
+                "month": 11,
+                "year": 2015
+            }]
+        }],
+        "relevantArticles": [{
+            "views": 211484,
+            "id": "970e54f8-6048-11e5-9846-de406ccb37f2",
+            "title": "VW emission test cheating rocks Europe’s carmakers",
+            "day": 8,
+            "month": 8,
+            "year": 2015
+        }, {
+            "views": 143692,
+            "id": "ee578522-91ee-11e5-9e3e-eb48769cecab",
+            "title": "VW admits second illegal device in 85,000 Audi engines",
+            "day": 8,
+            "month": 10,
+            "year": 2015
+        }, {
+            "views": 106384,
+            "id": "aa165e96-818c-11e5-8095-ed1a37d1e096",
+            "title": "Volkswagen emissions scandal spreads to Porsche",
+            "day": 8,
+            "month": 10,
+            "year": 2015
+        }]
+    }, {
+        "name": 2016,
+        "total": 98,
+        "children": [{
+            "name": "January",
+            "total": 13,
+            "relevantArticles": [{
+                "views": 56252,
+                "id": "243908d4-b312-11e5-8358-9a82b43f6b2f",
+                "title": "Volkswagen shares fall after US files lawsuit over defeat devices",
+                "day": 8,
+                "month": 0,
+                "year": 2016
+            }, {
+                "views": 36710,
+                "id": "a2bcc9cc-b7b1-11e5-b151-8e15c9a029fb",
+                "title": "Volkswagen hopes catalytic converter will help repair vehicles",
+                "day": 8,
+                "month": 0,
+                "year": 2016
+            }, {
+                "views": 35410,
+                "id": "9b3f7d80-ba12-11e5-bf7e-8a339b6f2164",
+                "title": "Volkswagen pledges to ‘rebuild trust’ in UK, but will not pay out",
+                "day": 8,
+                "month": 0,
+                "year": 2016
+            }]
+        }, {
+            "name": "February",
+            "total": 4,
+            "relevantArticles": [{
+                "views": 9248,
+                "id": "fff71726-d185-11e5-92a1-c5e23ef99c77",
+                "title": "Institutional investors turn to Dutch courts to recoup VW losses",
+                "day": 8,
+                "month": 1,
+                "year": 2016
+            }, {
+                "views": 8228,
+                "id": "3157c1dc-c9a5-11e5-a8ef-ea66e967dd44",
+                "title": "Car industry faces EU parliament verdict on emissions test rules",
+                "day": 8,
+                "month": 1,
+                "year": 2016
+            }, {
+                "views": 7720,
+                "id": "1627924e-ca76-11e5-be0b-b7ece4e953a0",
+                "title": "EU parliament backs emissions testing rules",
+                "day": 8,
+                "month": 1,
+                "year": 2016
+            }]
+        }, {
+            "name": "March",
+            "total": 6,
+            "relevantArticles": [{
+                "views": 22090,
+                "id": "862f4562-f1f1-11e5-9f20-c3a047354386",
+                "title": "VW faces tough month ahead as deadlines loom ",
+                "day": 8,
+                "month": 2,
+                "year": 2016
+            }, {
+                "views": 19724,
+                "id": "5d3ae2fe-e159-11e5-9217-6ae3733a2cd1",
+                "title": "VW boss is not the only leader crushed by information overload",
+                "day": 8,
+                "month": 2,
+                "year": 2016
+            }, {
+                "views": 19554,
+                "id": "8930e146-e6d2-11e5-a09b-1f8b0d268c39",
+                "title": "Emissions scandal: email to VW’s US chief cited fines risk",
+                "day": 8,
+                "month": 2,
+                "year": 2016
+            }]
+        }, {
+            "name": "April",
+            "total": 22,
+            "relevantArticles": [{
+                "views": 53180,
+                "id": "f54880d4-0638-11e6-9b51-0fb5e65703ce",
+                "title": "Volkswagen: The dirt under the bonnet",
+                "day": 8,
+                "month": 3,
+                "year": 2016
+            }, {
+                "views": 52808,
+                "id": "b728967a-02ed-11e6-99cb-83242733f755",
+                "title": "VW faces looming deadline as potential costs of scandal mount",
+                "day": 8,
+                "month": 3,
+                "year": 2016
+            }, {
+                "views": 45084,
+                "id": "d83cfec6-07cc-11e6-a623-b84d06a39ec2",
+                "title": "VW to buy back up to 480,000 US vehicles in deal with regulators ",
+                "day": 8,
+                "month": 3,
+                "year": 2016
+            }]
+        }, {
+            "name": "May",
+            "total": 6,
+            "relevantArticles": [{
+                "views": 109448,
+                "id": "13d2177a-1905-11e6-b8d5-4c1fcdbe169f",
+                "title": "Norway’s $850bn oil fund to sue Volkswagen",
+                "day": 8,
+                "month": 4,
+                "year": 2016
+            }, {
+                "views": 50508,
+                "id": "92218486-1391-11e6-839f-2922947098f0",
+                "title": "TCI launches campaign against executive pay at Volkswagen",
+                "day": 8,
+                "month": 4,
+                "year": 2016
+            }, {
+                "views": 13316,
+                "id": "dc9e10d4-20fb-11e6-9d4d-c11776a5124d",
+                "title": "Fiat hits back at German transport body over emissions tests ",
+                "day": 8,
+                "month": 4,
+                "year": 2016
+            }]
+        }, {
+            "name": "June",
+            "total": 13,
+            "relevantArticles": [{
+                "views": 48984,
+                "id": "fa44e6c2-2ef1-11e6-a18d-a96ab29e3c95",
+                "title": "VW set to unveil new strategy following diesel emissions scandal",
+                "day": 8,
+                "month": 5,
+                "year": 2016
+            }, {
+                "views": 22438,
+                "id": "f45c2b30-3cbb-11e6-8716-a4a71e8140b0",
+                "title": "VW in $14.7bn US deal over rigged cars",
+                "day": 8,
+                "month": 5,
+                "year": 2016
+            }, {
+                "views": 16924,
+                "id": "6a3621e0-3d33-11e6-9f2c-36b487ebd80a",
+                "title": "Volkswagen still faces criminal probe after $15.3bn US settlement",
+                "day": 8,
+                "month": 5,
+                "year": 2016
+            }]
+        }, {
+            "name": "July",
+            "total": 10,
+            "relevantArticles": [{
+                "views": 41474,
+                "id": "57c73dc6-3f6a-11e6-8716-a4a71e8140b0",
+                "title": "Volkswagen made a handbrake turn in its US strategy",
+                "day": 8,
+                "month": 6,
+                "year": 2016
+            }, {
+                "views": 39106,
+                "id": "ca716ede-4d23-11e6-88c5-db83e98a590a",
+                "title": "VW boss told of emissions issue in 2006, says New York attorney-general",
+                "day": 8,
+                "month": 6,
+                "year": 2016
+            }, {
+                "views": 17988,
+                "id": "60ca31fc-499d-11e6-8d68-72e9211e86ab",
+                "title": "US regulators reject VW’s 3-litre car fix",
+                "day": 8,
+                "month": 6,
+                "year": 2016
+            }]
+        }, {
+            "name": "August",
+            "total": 4,
+            "relevantArticles": [{
+                "views": 15938,
+                "id": "2ea57c2e-6ae3-11e6-ae5b-a7cc5dd5a28c",
+                "title": "Volkswagen may have to buy back more US cars",
+                "day": 8,
+                "month": 7,
+                "year": 2016
+            }, {
+                "views": 10210,
+                "id": "b8aece32-586b-11e6-8d05-4eaa66292c32",
+                "title": "Volkswagen hit with South Korea sales ban",
+                "day": 8,
+                "month": 7,
+                "year": 2016
+            }, {
+                "views": 8226,
+                "id": "e7c0103e-6ead-11e6-a0c9-1365ce54b926",
+                "title": "Volkswagen chief executive takes aim at conservative forces",
+                "day": 8,
+                "month": 7,
+                "year": 2016
+            }]
+        }, {
+            "name": "September",
+            "total": 6,
+            "relevantArticles": [{
+                "views": 63998,
+                "id": "9bac3826-76af-11e6-bf48-b372cdb1043a",
+                "title": "Unsealed papers in VW scandal reveal panic among engineers",
+                "day": 8,
+                "month": 8,
+                "year": 2016
+            }, {
+                "views": 35122,
+                "id": "59d57584-737b-11e6-b60a-de4532d5ea35",
+                "title": "Volkswagen faces fresh EU claims over emissions scandal",
+                "day": 8,
+                "month": 8,
+                "year": 2016
+            }, {
+                "views": 15970,
+                "id": "161135fc-82f0-11e6-8897-2359a58ac7a5",
+                "title": "Volkswagen set to accelerate diesel recalls in Europe",
+                "day": 8,
+                "month": 8,
+                "year": 2016
+            }]
+        }, {
+            "name": "October",
+            "total": 10,
+            "relevantArticles": [{
+                "views": 23810,
+                "id": "6e0ec870-798e-11e6-97ae-647294649b28",
+                "title": "Bosch product under scrutiny in VW emissions scandal",
+                "day": 8,
+                "month": 9,
+                "year": 2016
+            }, {
+                "views": 21234,
+                "id": "f3e59748-978f-11e6-a80e-bcd69f323a8b",
+                "title": "Diesel sales fall to lowest in seven years after VW scandal",
+                "day": 8,
+                "month": 9,
+                "year": 2016
+            }, {
+                "views": 16050,
+                "id": "8ba08428-9554-11e6-a1dc-bdf38d484582",
+                "title": "Brussels knew carmakers gamed emissions tests before VW scandal",
+                "day": 8,
+                "month": 9,
+                "year": 2016
+            }]
+        }, {
+            "name": "November",
+            "total": 4,
+            "relevantArticles": [{
+                "views": 40430,
+                "id": "78d194aa-ad72-11e6-9cb3-bb8207902122",
+                "title": "VW to cut 30,000 jobs in wake of diesel emissions scandal",
+                "day": 8,
+                "month": 10,
+                "year": 2016
+            }, {
+                "views": 28026,
+                "id": "f5a250e6-a4d5-11e6-8898-79a99e2a4de6",
+                "title": "China’s electric cars are chasing Volkswagen",
+                "day": 8,
+                "month": 10,
+                "year": 2016
+            }, {
+                "views": 18684,
+                "id": "ae55605a-a414-11e6-8898-79a99e2a4de6",
+                "title": "VW criminal probe expands to include chairman",
+                "day": 8,
+                "month": 10,
+                "year": 2016
+            }]
+        }, {
+            "name": "December",
+            "total": 0,
+            "relevantArticles": []
+        }],
+        "relevantArticles": [{
+            "views": 109448,
+            "id": "13d2177a-1905-11e6-b8d5-4c1fcdbe169f",
+            "title": "Norway’s $850bn oil fund to sue Volkswagen",
+            "day": 8,
+            "month": 4,
+            "year": 2016
+        }, {
+            "views": 63998,
+            "id": "9bac3826-76af-11e6-bf48-b372cdb1043a",
+            "title": "Unsealed papers in VW scandal reveal panic among engineers",
+            "day": 8,
+            "month": 8,
+            "year": 2016
+        }, {
+            "views": 56252,
+            "id": "243908d4-b312-11e5-8358-9a82b43f6b2f",
+            "title": "Volkswagen shares fall after US files lawsuit over defeat devices",
+            "day": 8,
+            "month": 0,
+            "year": 2016
+        }]
+    }]
+}

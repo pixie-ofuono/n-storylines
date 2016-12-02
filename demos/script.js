@@ -12,7 +12,7 @@ Promise.all([
 		});
 
 		Handlebars.registerHelper('timestamp', (day, month, year) => {
-			let date = new Date(year, month);
+			let date = new Date(year, month, day);
 			return date.toLocaleString('en-US', { day: "numeric", month: "long", year: "numeric" });
 		});
 

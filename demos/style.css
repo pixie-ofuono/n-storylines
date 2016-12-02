@@ -20,6 +20,9 @@ body {
 .n-storylines__heatmap-segment-name {
   text-align: center;
 }
+.segment-name {
+  text-align: center
+}
 
 .n-storylines__top-content {
     counter-reset: list;
@@ -29,7 +32,8 @@ body {
 
 .n-storylines__article {
   position:relative;
-  padding-left: 20px;;
+  padding-left: 20px;
+  margin-bottom: 25px;
 }
 
 .n-storylines__article:before {
@@ -50,7 +54,7 @@ body {
 }
 
 .n-storylines__article {
-  margin-bottom: 25px;
+
 }
 
 .n-storylines__info {

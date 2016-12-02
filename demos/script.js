@@ -5,7 +5,8 @@ Promise.all([
 		.then(res => res.json()),
 ])
 	.then(([source, data]) => {
-		const template = Handlebars.compile(source);
+		const yearTotals = data.children.map(x => x.total).sort((a, b) => a - b);
+		const yearMax = yearTotals[yearTotals.length - 1];
 
 		Handlebars.registerHelper('abbreviate', (word) => {
 			return typeof word === 'string' ? word.substring(0,3) : word;

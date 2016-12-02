@@ -29,17 +29,24 @@ body {
 
 .n-storylines__article {
   position:relative;
-  padding-left: 15px;;
+  padding-left: 20px;;
 }
 
 .n-storylines__article:before {
   counter-increment: list;
   content: counter(list);
   position: absolute;
-  font: 20px MetricWeb;
-  color: #000;
-  left: -10px;
-  top: 5px;
+  font: 12px/13px MetricWeb, sans-serif;
+  color: #fff;
+  left: -13px;
+  top: 10px;
+  text-align: center;
+
+  background-color: #000;
+  border-radius: 13px;
+  height: 13px;
+  width: 13px;
+  padding: 5px;
 }
 
 .n-storylines__article {

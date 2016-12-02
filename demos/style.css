@@ -1,5 +1,7 @@
 body {
   background: #fff1e0;
+  width: 90%;
+  margin:  0 auto;
 }
 
 .n-storylines__timeline-container {
@@ -41,7 +43,7 @@ body {
   content: counter(list);
   position: absolute;
   font: 12px/13px MetricWeb, sans-serif;
-  color: #fff;
+  color: #fff1e0;
   left: -13px;
   top: 10px;
   text-align: center;
@@ -79,17 +81,16 @@ span {
   font-weight: 600;
 }
 
-li>.o-typography-timestamp {
+.o-typography-timestamp {
   margin: 5px 0;
 }
-/*having doubts about how to approach the a tag*/
 
-.n-storylines__article>a {
+.n-storylines__article-link {
   text-decoration: none;
   color: #505050;
 }
 
-a:hover {
+.n-storylines__article-link:hover {
   cursor: pointer;
   color: #777;
 }

@@ -1,3 +1,4 @@
+{{#if relevantArticles}}
 <div class="n-storylines">
 	<div class="n-storylines__info o-typography-aside__body--small">
     {{#if children.0.children}}
@@ -31,9 +32,15 @@
 	<ul class="n-storylines__top-content">
 		{{#each relevantArticles}}
 		<li class="n-storylines__article o-typography-aside__headline--small">
-      <a class="n-storylines__article-link" href="https://www.ft.com/content/{{id}}">{{title}}</a>
+      <a class="n-storylines__article-l`ink" href="https://www.ft.com/content/{{id}}">{{title}}</a>
 		  <p class="o-typography-timestamp">{{timestamp day month year}}</p>
     </li>
 		{{/each}}
 	</ul>
 </div>
+{{else}}
+ <div style="margin: 0 auto; font-weight: 600">
+
+ </div>
+ LOLZ no data
+{{/if}}

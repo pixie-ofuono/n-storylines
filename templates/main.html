@@ -18,7 +18,11 @@
 		{{#if children}}
 		{{#each children}}
 		<div class="n-storylines__heatmap-segment">
-			<div class="n-storylines__heatmap-segment-colour" style="opacity: {{weight}};"></div>
+			<div class="n-storylines__heatmap-segment-colour" style="opacity: {{weight}};">
+				{{#if ../this.relevantArticles}}
+					ARTICLES!
+					{{/if}}
+			</div>
 			<p class="n-storylines__heatmap-segment-name o-typography-aside__body--small">{{abbreviate name}}</p>
 		</div>
 		{{/each}}

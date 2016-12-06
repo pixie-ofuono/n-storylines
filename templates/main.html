@@ -1,13 +1,14 @@
 <div class="n-storylines">
-	<div class="n-storylines__info o-typography-aside__body--small">
-    {{#if children.0.children}}
-		Most popular articles since <span>{{ children.0.name  }}</span>
+	<div class="n-storylines__info o-typography-aside__body">
+		Explore articles of<span>
+		{{#if children.0.children}}
+			{{ children.0.name  }}
     {{else}}
-		Most popular articles in <span>{{name}}</span>
-    {{/if}}
+			{{name}}
+		{{/if}}
+		</span>
 	</div>
 
-  <hr>
 	<div class="n-storylines__content-count o-typography-aside__body--small">
 		{{total}} articles published
 	</div>
@@ -28,10 +29,13 @@
 		</div>
 		{{/if}}
 	</div>
+	<div class="n-storylines__article-header o-typography-aside__body--small">
+		Most popular articles
+	</div>
 	<ul class="n-storylines__top-content">
 		{{#each relevantArticles}}
 		<li class="n-storylines__article o-typography-aside__headline--small">
-      <a href="https://www.ft.com/content/{{id}}">{{title}}</a>
+      <a class="n-storylines__article-link" href="https://www.ft.com/content/{{id}}">{{title}}</a>
 		  <p class="o-typography-timestamp">{{timestamp day month year}}</p>
     </li>
 		{{/each}}

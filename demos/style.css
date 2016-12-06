@@ -54,6 +54,7 @@ body {
     counter-reset: list;
     list-style-type: none;
     width: 85%;
+    margin-top: 20px;
 }
 
 .n-storylines__article {
@@ -63,7 +64,8 @@ body {
   line-height: 20px;
 }
 
-.n-storylines__article:before {
+
+.n-storylines__article::before {
   counter-increment: list;
   content: counter(list);
   position: absolute;
@@ -78,6 +80,20 @@ body {
   height: 15px;
   width: 15px;
   padding: 5px;
+}
+
+.n-storylines__top-content {
+  position: relative;
+}
+.n-storylines__top-content::before {
+  content: '';
+  position: absolute;
+  border-left: 1px solid #cec6b9;
+  top: 42%;
+  bottom: 10px;
+  left: 41px;
+  margin: 0;
+  z-index: 0;
 }
 
 .n-storylines__info {

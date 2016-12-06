@@ -1,6 +1,12 @@
 <div class="n-storylines">
 	<div class="n-storylines__info o-typography-aside__body">
-		Explore articles of <span>{{ children.0.name  }}</span>
+		Explore articles of<span>
+		{{#if children.0.children}}
+			{{ children.0.name  }}
+    {{else}}
+			{{name}}
+		{{/if}}
+		</span>
 	</div>
 
 	<div class="n-storylines__content-count o-typography-aside__body--small">

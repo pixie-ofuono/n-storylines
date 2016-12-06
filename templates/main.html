@@ -1,13 +1,8 @@
 <div class="n-storylines">
-	<div class="n-storylines__info o-typography-aside__body--small">
-    {{#if children.0.children}}
-		Most popular articles since <span>{{ children.0.name  }}</span>
-    {{else}}
-		Most popular articles in <span>{{name}}</span>
-    {{/if}}
+	<div class="n-storylines__info o-typography-aside__body">
+		Explore articles of <span>{{ children.0.name  }}</span>
 	</div>
 
-  <hr>
 	<div class="n-storylines__content-count o-typography-aside__body--small">
 		{{total}} articles published
 	</div>
@@ -27,6 +22,9 @@
 			<p class="n-storylines__heatmap-segment-name o-typography-aside__body--small">{{name}}</p>
 		</div>
 		{{/if}}
+	</div>
+	<div class="n-storylines__article-header o-typography-aside__body--small">
+		Most popular articles
 	</div>
 	<ul class="n-storylines__top-content">
 		{{#each relevantArticles}}

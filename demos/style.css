@@ -1,7 +1,13 @@
 body {
-  background: #fff1e0;
-  width: 90%;
+  width: 85%;
+  background: #fbe9da;
   margin:  0 auto;
+  font-family: MetricWeb;
+}
+
+.n-storylines {
+  border-top: 8px solid #000;
+  border-bottom: 1px solid #cec6b9;
 }
 
 .n-storylines__timeline-container {
@@ -9,7 +15,7 @@ body {
   position: relative;
   width: 100%;
   padding-top: 10px;
-  background: #fff1e0;
+  background: #fbe9da;
 }
 
 .n-storylines__timeline-container:before {
@@ -39,6 +45,7 @@ body {
 .n-storylines__heatmap-segment-name {
   text-align: center;
 }
+
 .segment-name {
   text-align: center
 }
@@ -46,60 +53,54 @@ body {
 .n-storylines__top-content {
     counter-reset: list;
     list-style-type: none;
-    width: 80%;
+    width: 85%;
 }
 
 .n-storylines__article {
   position:relative;
-  padding-left: 20px;
-  margin-bottom: 25px;
+  margin: -5px 0 25px;
+  font-size: 18px;
+  line-height: 20px;
 }
 
 .n-storylines__article:before {
   counter-increment: list;
   content: counter(list);
   position: absolute;
-  font: 12px/13px MetricWeb, sans-serif;
+  font: 14px/15px MetricWeb, sans-serif;
   color: #fff1e0;
-  left: -13px;
-  top: 10px;
+  left: -15%;
+  top: 2px;
   text-align: center;
 
   background-color: #333;
-  border-radius: 13px;
-  height: 13px;
-  width: 13px;
+  border-radius: 15px;
+  height: 15px;
+  width: 15px;
   padding: 5px;
 }
 
-.n-storylines__article {
-
-}
-
 .n-storylines__info {
-  float: left;
-  margin-bottom: 18px;
+  margin: 8px 0;
 }
 
 .n-storylines__content-count {
   float: left;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
-hr {
-  border: 0;
-  height: 0;
-  border-top: 1px solid #fff1e0;
-  border-bottom: 1px solid #999;
-  width: 100%;
+.n-storylines__article-header {
+  margin-top: 40px;
 }
 
 span {
   font-weight: 600;
 }
 
-.o-typography-timestamp {
-  margin: 5px 0;
+.n-storylines__article>.o-typography-timestamp {
+  margin-top: 5px;
+  font-size: 14px;
+  color: rgba(0,0,0,0.60);
 }
 
 .n-storylines__article-link {
@@ -114,6 +115,6 @@ span {
 
 
 .n-storylines__back-btn {
-  width: 2em;
-  height: 2em;
+  width: 1.5em;
+  height: 3.3em;
 }

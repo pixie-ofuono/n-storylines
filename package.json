@@ -1,5 +1,5 @@
 {
-  "name": "n-storylines",
+  "name": "@financial-times/n-storylines",
   "version": "0.0.1",
   "devDependencies": {
     "@financial-times/n-webpack": "^2.1.6",

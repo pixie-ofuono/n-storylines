@@ -5,6 +5,10 @@ Promise.all([
 		.then(res => res.json()),
 ])
 	.then(([source, data]) => {
+	const Handlebars = require('handlebars')
+	const source = require('./N2FkZjRhMWUtZDZjNS00ZTQ0LTg1MTMtMjYyYzBlODkzYTQ2-UE4=.json');
+	const initialData = require('../templates/main.html');
+
 		const template = Handlebars.compile(source);
 
 		Handlebars.registerHelper('abbreviate', (word) => {

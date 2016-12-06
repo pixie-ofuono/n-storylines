@@ -1,8 +1,8 @@
 body {
   width: 85%;
   background: #fbe9da;
-  margin:  0 auto;
   font-family: MetricWeb;
+  margin: 0 auto;
 }
 
 .n-storylines {
@@ -84,7 +84,7 @@ body {
   position: absolute;
   font: 14px/15px MetricWeb, sans-serif;
   color: #fff1e0;
-  left: -15%;
+  left: -35px;
   top: 2px;
   text-align: center;
 

@@ -30,6 +30,7 @@ body {
 
 .n-storylines__heatmap-segment {
   width: 100%;
+  counter-reset: dot;
 }
 
 .n-storylines__heatmap-segment:hover {
@@ -42,20 +43,32 @@ body {
   width: 100%;
   height: 50px;
 }
+
 .n-storylines__heatmap-segment-name {
   text-align: center;
+  position: relative;
+  margin-top:10px;
 }
+
+.n-storylines__heatmap-segment-name::before {
+  counter-increment: dot;
+  content: '';
+  position: absolute;
+  top: -95%;
+  left: 45%;
+  background-color: #fbe9da;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  border-radius: 100%;
+  height: 9px;
+  width: 9px;
+  z-index: 30;
+}
+
 
 .segment-name {
   text-align: center
 }
 
-.n-storylines__top-content {
-    counter-reset: list;
-    list-style-type: none;
-    width: 85%;
-    margin-top: 20px;
-}
 
 .n-storylines__article {
   position:relative;
@@ -76,24 +89,28 @@ body {
   text-align: center;
 
   background-color: #333;
-  border-radius: 15px;
+  border-radius: 100%;
   height: 15px;
   width: 15px;
   padding: 5px;
 }
 
 .n-storylines__top-content {
+  counter-reset: list;
+  list-style-type: none;
+  width: 85%;
+  margin-top: 20px;
   position: relative;
 }
+
 .n-storylines__top-content::before {
   content: '';
   position: absolute;
   border-left: 1px solid #cec6b9;
-  top: 42%;
-  bottom: 10px;
-  left: 41px;
+  top: 5px;
+  bottom: 25px;
+  left: 17px;
   margin: 0;
-  z-index: 0;
 }
 
 .n-storylines__info {

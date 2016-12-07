@@ -13,24 +13,32 @@
 		{{total}} articles published
 	</div>
 
-	<div class="n-storylines__timeline-container">
-		<img class="n-storylines__back-btn" src="http://image.webservices.ft.com/v1/images/raw/fticon-v1:arrow-left?source=o-icons"/>
-		{{#if children}}
-		{{#each children}}
-		<div class="n-storylines__heatmap-segment">
-			<div class="n-storylines__heatmap-segment-colour" style="opacity: {{weight}};">
-				{{#if ../this.relevantArticles}}
-					ARTICLES!
+		<div class="n-storylines__timeline-container">
+			<img class="n-storylines__back-btn" src="http://image.webservices.ft.com/v1/images/raw/fticon-v1:arrow-left?source=o-icons"/>
+
+		{{#if children.0.children}}
+			{{#each children}}
+			<div class="n-storylines__heatmap-segment">
+				<ul class="dot-container">
+					{{#if dot}}
+					{{#each dot}}
+					<li class='dot' style='margin-left: {{position}}%'>{{name}}</li>
+					{{/each}}
 					{{/if}}
+				</ul>
+				<div class="n-storylines__heatmap-segment-colour" style="opacity: {{weight}};"></div>
+				<p class="n-storylines__heatmap-segment-name o-typography-aside__body--small">{{abbreviate name}}</p>
 			</div>
-			<p class="n-storylines__heatmap-segment-name o-typography-aside__body--small">{{abbreviate name}}</p>
-		</div>
-		{{/each}}
+
+			{{/each}}
+		{{else if children}}
+				{{> months}}
 		{{else}}
-		<div class="n-storylines__heatmap-segment">
-			<div class="n-storylines__heatmap-segment-colour" style="opacity: {{weight}};"></div>
-			<p class="n-storylines__heatmap-segment-name o-typography-aside__body--small">{{name}}</p>
-		</div>
+			<div class="n-storylines__heatmap-segment">
+				<div class="n-storylines__heatmap-segment-colour" style="opacity: {{weight}};"></div>
+
+				<p class="n-storylines__heatmap-segment-name o-typography-aside__body--small">{{name}}</p>
+			</div>
 		{{/if}}
 	</div>
 	<div class="n-storylines__article-header o-typography-aside__body--small">

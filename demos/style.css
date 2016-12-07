@@ -5,6 +5,42 @@ body {
   margin: 0 auto;
 }
 
+.n-storylines__scroll{
+  overflow-x: auto;
+  white-space: nowrap;
+  display: flex;
+  position: relative;
+  background: #fbe9da;
+}
+
+.n-storylines__all-months {
+  min-width:50px;
+}
+
+.dot-container {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  margin-right: 20px;
+}
+
+.dot {
+  position: absolute;
+  background: black;
+  top: -10px;
+  height: 10px;
+  width: 10px;
+  border-radius: 100%;
+  text-align: center;
+  font-size: 10px;
+  line-height: 10px;
+  color: white;
+  padding: 5px;
+  z-index: 3;
+  margin-right: -4%;
+}
+
 .n-storylines {
   border-top: 8px solid #000;
   border-bottom: 1px solid #cec6b9;
@@ -23,17 +59,19 @@ body {
   content:"";
   margin: 0 auto;
   position: absolute;
-  top: 45%; left: -30%;
+  top: 35px;
+  left: -30%;
   width: 150%;
   z-index: -1;
 }
 
 .n-storylines__heatmap-segment {
   width: 100%;
-  counter-reset: dot;
+  margin-top: 10px;
 }
 
-.n-storylines__heatmap-segment:hover {
+.n-storylines__heatmap-segment:hover,
+.n-storylines__all-months {
   transition: width .3s;
   width: 120%;
 }
@@ -42,6 +80,7 @@ body {
   background: #B11F42;
   width: 100%;
   height: 50px;
+  display: flex;
 }
 
 .n-storylines__heatmap-segment-name {
@@ -61,9 +100,7 @@ body {
   border-radius: 100%;
   height: 9px;
   width: 9px;
-  z-index: 30;
 }
-
 
 .segment-name {
   text-align: center
@@ -146,7 +183,7 @@ span {
 }
 
 
-.n-storylines__back-btn {
+.n-storylines__back-btn{
   width: 1.5em;
-  height: 3.3em;
+  height: 3.5em;
 }

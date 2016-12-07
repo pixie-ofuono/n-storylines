@@ -1,12 +1,14 @@
+{{#each children}}
 <div class="n-storylines__heatmap-segment">
-  <!-- <ul class="dot-container">
+  <ul class="dot-container">
     {{#if dot}}
     {{#each dot}}
-    <li class='dot'>{{this}}</li>
+    <li class='dot' style='margin-left: {{position}}%'>{{name}}</li>
     {{/each}}
     {{/if}}
-</ul> -->
-  <div class="n-storylines__heatmap-segment-colour" style="opacity: {{weight}};">
-  </div>
+  </ul>
+  <div class="n-storylines__heatmap-segment-colour" style="opacity: {{weight}};"></div>
   <p class="n-storylines__heatmap-segment-name o-typography-aside__body--small">{{abbreviate name}}</p>
 </div>
+
+{{/each}}

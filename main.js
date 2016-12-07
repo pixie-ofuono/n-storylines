@@ -4,14 +4,14 @@ Promise.all([
 ])
 	.then(([source, initialData]) => {
 		const template = Handlebars.compile(source);
-		const component = document.querySelector('.n-storylines');
+		const component = document.querySelector('.le-container');
 		const heatmapSegments = document.getElementsByClassName('n-storylines__heatmap-segment-colour');
 		const backBtns = document.getElementsByClassName('n-storylines__back-btn');
 
 		const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
 
 		const dotData = yearDots(initialData);
-		
+
 		function yearDots (data) {
 			data.children.forEach(year => {
 				year['dot'] = []
@@ -50,7 +50,6 @@ Promise.all([
 		setupInteraction(dotData);
 
 		function setupInteraction (data) {
-			console.log(data);
 			backBtns[0].style.display = data === initialData ? 'none' : '';
 			if (!data.children) return;
 

@@ -22,6 +22,12 @@ Promise.all([
 			Handlebars.registerPartial('months', monthsPartial)
 		})
 
+		// fetch('../templates/partials/years.html')
+		// .then(res => res.text())
+		// .then(yearsPartial => {
+		// 	Handlebars.registerPartial('years', yearsPartial)
+		// })
+
 		const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
 
 		const dotData = yearDots(data);
@@ -61,9 +67,7 @@ Promise.all([
 			}
 		}
 
-
-
-		document.body.innerHTML = template(dotData);
+		document.querySelector('.le-container').innerHTML = template(dotData);
 
 		const script = document.createElement('script');
 		script.src = '../main.js';

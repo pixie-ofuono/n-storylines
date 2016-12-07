@@ -50,7 +50,6 @@ body {
   display: flex;
   position: relative;
   width: 100%;
-  padding-top: 10px;
   background: #fbe9da;
 }
 
@@ -68,12 +67,7 @@ body {
 .n-storylines__heatmap-segment {
   width: 100%;
   margin-top: 10px;
-}
-
-.n-storylines__heatmap-segment:hover,
-.n-storylines__all-months {
-  transition: width .3s;
-  width: 120%;
+  text-align: center;
 }
 
 .n-storylines__heatmap-segment-colour {
@@ -84,7 +78,6 @@ body {
 }
 
 .n-storylines__heatmap-segment-name {
-  text-align: center;
   position: relative;
   margin-top:10px;
 }
@@ -101,11 +94,6 @@ body {
   height: 9px;
   width: 9px;
 }
-
-.segment-name {
-  text-align: center
-}
-
 
 .n-storylines__article {
   position:relative;
@@ -144,7 +132,7 @@ body {
   position: absolute;
   border-left: 1px solid #cec6b9;
   top: 5px;
-  bottom: 25px;
+  bottom: 35px;
   left: 17px;
   margin: 0;
 }
@@ -185,5 +173,5 @@ span {
 
 .n-storylines__back-btn{
   width: 1.5em;
-  height: 3.5em;
+  height: 4.5em;
 }

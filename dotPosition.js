@@ -1,3 +1,5 @@
+const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+
 module.exports = function yearDots (data) {
   data.children.forEach(year => {
     year['dot'] = []

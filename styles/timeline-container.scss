@@ -1,0 +1,32 @@
+.n-storylines__timeline-container {
+  display: flex;
+  position: relative;
+  width: 100%;
+  background: #fbe9da;
+}
+
+.n-storylines__timeline-container:before {
+  border-top: 1px solid #cec6b9;
+  content: "";
+  margin: 0 auto;
+  position: absolute;
+  top: 35px;
+  left: -30%;
+  width: 150%;
+  z-index: -1;
+}
+
+.n-storylines__back-btn {
+  width: 1.5em;
+  height: 4.5em;
+	@include oIconsGetIcon('plus', oColorsGetPaletteColor('teal-1'), 32);
+}
+
+.n-storylines__scroll {
+  overflow-x: auto;
+  white-space: nowrap;
+  display: flex;
+  position: relative;
+  background: #fbe9da;
+	width: 100%;
+}

@@ -63,7 +63,6 @@
 	const yearDots = __webpack_require__(25);
 	
 	function init(initialData) {
-		const component = document.querySelector('.n-storylines');
 		const heatmapSegments = document.getElementsByClassName('n-storylines__heatmap-segment-colour');
 		const backBtns = document.getElementsByClassName('n-storylines__back-btn');
 		const dotData = yearDots(initialData);
@@ -88,7 +87,8 @@
 		}
 	
 		function renderStoryline(data) {
-			component.innerHTML = template(data);
+			const component = document.querySelector('.n-storylines');
+			component.parentNode.innerHTML = template(data);
 			setupInteraction(data);
 		}
 	
@@ -155,11 +155,11 @@
 	    + ((stack1 = helpers["if"].call(alias1,((stack1 = ((stack1 = (depth0 != null ? depth0.children : depth0)) != null ? stack1["0"] : stack1)) != null ? stack1.children : stack1),{"name":"if","hash":{},"fn":container.program(1, data, 0),"inverse":container.program(3, data, 0),"data":data})) != null ? stack1 : "")
 	    + "		</span>\n	</div>\n\n	<div class=\"n-storylines__content-count o-typography-aside__body--small\">\n		"
 	    + container.escapeExpression(container.lambda((depth0 != null ? depth0.total : depth0), depth0))
-	    + " articles published\n	</div>\n\n	<div class=\"n-storylines__timeline-container\">\n"
+	    + " articles published\n	</div>\n\n	<div class=\"n-storylines__timeline-container\">\n		<i class=\"n-storylines__back-btn o-icons-icon o-icons-icon--arrow-left\"></i>\n\n"
 	    + ((stack1 = helpers["if"].call(alias1,((stack1 = ((stack1 = (depth0 != null ? depth0.children : depth0)) != null ? stack1["0"] : stack1)) != null ? stack1.children : stack1),{"name":"if","hash":{},"fn":container.program(5, data, 0),"inverse":container.program(7, data, 0),"data":data})) != null ? stack1 : "")
 	    + "		</div>\n\n	<div class=\"n-storylines__article-header o-typography-aside__body--small\">\n		Key articles\n	</div>\n\n	<ul class=\"n-storylines__top-content\">\n"
 	    + ((stack1 = helpers.each.call(alias1,(depth0 != null ? depth0.relevantArticles : depth0),{"name":"each","hash":{},"fn":container.program(12, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
-	    + "	</ul>\n	\n</div>\n";
+	    + "	</ul>\n\n</div>\n";
 	},"usePartial":true,"useData":true});
 
 /***/ },
@@ -1384,8 +1384,7 @@
 	},"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
 	    var stack1;
 	
-	  return "<img class=\"n-storylines__back-btn\" src=\"http://image.webservices.ft.com/v1/images/raw/fticon-v1:arrow-left?source=o-icons\"/>\n\n"
-	    + ((stack1 = helpers.each.call(depth0 != null ? depth0 : {},(depth0 != null ? depth0.children : depth0),{"name":"each","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "");
+	  return ((stack1 = helpers.each.call(depth0 != null ? depth0 : {},(depth0 != null ? depth0.children : depth0),{"name":"each","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "");
 	},"useData":true});
 
 /***/ },
@@ -1419,7 +1418,7 @@
 	},"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
 	    var stack1;
 	
-	  return "\n		<div class=\"n-storylines__scroll\">\n			<img class=\"n-storylines__back-btn\" src=\"http://image.webservices.ft.com/v1/images/raw/fticon-v1:arrow-left?source=o-icons\"/>\n"
+	  return "\n		<div class=\"n-storylines__scroll\">\n			<!-- <img class=\"n-storylines__back-btn\" src=\"http://image.webservices.ft.com/v1/images/raw/fticon-v1:arrow-left?source=o-icons\"/> -->\n"
 	    + ((stack1 = helpers.each.call(depth0 != null ? depth0 : {},(depth0 != null ? depth0.children : depth0),{"name":"each","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
 	    + "		</div>\n";
 	},"useData":true});
@@ -1433,7 +1432,7 @@
 	module.exports = (Handlebars["default"] || Handlebars).template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
 	    var helper, alias1=depth0 != null ? depth0 : {}, alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
 	
-	  return "<img class=\"n-storylines__back-btn\" src=\"http://image.webservices.ft.com/v1/images/raw/fticon-v1:arrow-left?source=o-icons\"/>\n	<div class=\"n-storylines__heatmap-segment\">\n		<div class=\"n-storylines__heatmap-segment-colour\" style=\"opacity: "
+	  return "<!-- <img class=\"n-storylines__back-btn\" src=\"http://image.webservices.ft.com/v1/images/raw/fticon-v1:arrow-left?source=o-icons\"/> -->\n	<div class=\"n-storylines__heatmap-segment\">\n		<div class=\"n-storylines__heatmap-segment-colour\" style=\"opacity: "
 	    + alias4(((helper = (helper = helpers.weight || (depth0 != null ? depth0.weight : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"weight","hash":{},"data":data}) : helper)))
 	    + ";\"></div>\n\n		<p class=\"n-storylines__heatmap-segment-name o-typography-aside__body--small\">"
 	    + alias4(((helper = (helper = helpers.name || (depth0 != null ? depth0.name : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"name","hash":{},"data":data}) : helper)))

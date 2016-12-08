@@ -2,7 +2,6 @@ const template = require('./templates/main.html');
 const yearDots = require('./lib/dotPosition');
 
 function init(initialData) {
-	const component = document.querySelector('.n-storylines');
 	const heatmapSegments = document.getElementsByClassName('n-storylines__heatmap-segment-colour');
 	const backBtns = document.getElementsByClassName('n-storylines__back-btn');
 	const dotData = yearDots(initialData);
@@ -27,7 +26,8 @@ function init(initialData) {
 	}
 
 	function renderStoryline(data) {
-		component.innerHTML = template(data);
+		const component = document.querySelector('.n-storylines');
+		component.parentNode.innerHTML = template(data);
 		setupInteraction(data);
 	}
 

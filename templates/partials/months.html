@@ -1,0 +1,18 @@
+
+<div class="n-storylines__scroll">
+  <img class="n-storylines__back-btn" src="http://image.webservices.ft.com/v1/images/raw/fticon-v1:arrow-left?source=o-icons"/>
+
+{{#each children}}
+  <div class="n-storylines__heatmap-segment n-storylines__heatmap-segment--all-months ">
+    <ul class="dot-container">
+      {{#if dot}}
+      {{#each dot}}
+      <li class='dot' style="margin-left: {{position}}%">{{name}}</li>
+      {{/each}}
+      {{/if}}
+    </ul>
+        <div class="n-storylines__heatmap-segment-colour n-storylines__all-months" style="opacity: {{weight}};"></div>
+        <p class="n-storylines__heatmap-segment-name o-typography-aside__body--small">{{abbreviate name}}</p>
+  </div>
+{{/each}}
+</div>

@@ -1,15 +1,14 @@
 const template = require('./templates/main.html');
-const yearDots = require('./lib/dotPosition');
 
-function init(initialData) {
+function init () {
+	const initialData = window.FT.storylineData;
 	const component = document.querySelector('.n-storylines');
 	const heatmapSegments = document.getElementsByClassName('n-storylines__heatmap-segment-colour');
 	const backBtns = document.getElementsByClassName('n-storylines__back-btn');
-	const dotData = yearDots(initialData);
 
-	setupInteraction(dotData);
+	setupInteraction(initialData);
 
-	function setupInteraction(data) {
+	function setupInteraction (data) {
 		backBtns[0].style.display = data === initialData ? 'none' : '';
 		if (!data.children) return;
 
@@ -26,19 +25,20 @@ function init(initialData) {
 		}
 	}
 
-	function renderStoryline(data) {
+	function renderStoryline (data) {
 		component.innerHTML = template(data);
 		setupInteraction(data);
 	}
 
-	function setupBackBtn(data) {
+	function setupBackBtn (data) {
 		backBtns[0].addEventListener('click', () => {
 			renderStoryline(data);
-			setupBackBtn(dotData);
+			setupBackBtn(initialData);
 		});
 	}
 }
 
 module.exports = {
-	init
+	init,
+	decorate: require('./lib/dotPosition')
 };

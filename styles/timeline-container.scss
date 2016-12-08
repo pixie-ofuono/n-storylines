@@ -17,9 +17,8 @@
 }
 
 .n-storylines__back-btn {
-  width: 1.5em;
-  height: 4.5em;
-	@include oIconsGetIcon('plus', oColorsGetPaletteColor('teal-1'), 32);
+	margin-top: 19px;
+	@include oIconsGetIcon('arrow-left', oColorsGetPaletteColor('teal-1'), 32);
 }
 
 .n-storylines__scroll {

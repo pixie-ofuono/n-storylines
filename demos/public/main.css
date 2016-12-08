@@ -26,7 +26,7 @@
 }.n-storylines__top-content::before {
   content: '';
   position: absolute;
-  border-left: 1px solid #cec6b9;
+  border-top: 1px solid #cec6b9;
   top: 5px;
   bottom: 35px;
   left: 17px;
@@ -60,8 +60,17 @@
   width: 150%;
   z-index: -1;
 }.n-storylines__back-btn {
-  width: 1.5em;
-  height: 4.5em;
+  margin-top: 19px;
+  background-image: url("https://www.ft.com/__origami/service/image/v2/images/raw/fticon-v1:arrow-left?source=o-icons&tint=%2326747A,%2326747A&format=svg");
+  background-image: url("https://www.ft.com/__origami/service/image/v2/images/raw/fticon-v1:arrow-left?source=o-icons&tint=%2326747A,%2326747A&format=png&width=32") \9;
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50%;
+  background-color: transparent;
+  vertical-align: baseline;
 }.n-storylines__scroll {
   overflow-x: auto;
   white-space: nowrap;

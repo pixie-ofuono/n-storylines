@@ -30,7 +30,7 @@
 					</ul>
 
 					<div class="n-storylines__heatmap-segment-colour" style="opacity: {{weight}};"></div>
-					<p class="n-storylines__heatmap-segment-name o-typography-aside__body--small">{{abbreviate name}}</p>
+					<p class="n-storylines__heatmap-segment-name o-typography-aside__body--small">{{ name}}</p>
 				</div>
 			{{/each}}
 		{{else if children}}
@@ -48,7 +48,7 @@
 					{{/if}}
 				</ul>
 						<div class="n-storylines__heatmap-segment-colour n-storylines__all-months" style="opacity: {{weight}};"></div>
-						<p class="n-storylines__heatmap-segment-name o-typography-aside__body--small">{{abbreviate name}}</p>
+						<p class="n-storylines__heatmap-segment-name o-typography-aside__body--small">{{ name}}</p>
 			</div>
 		{{/each}}
 		</div>
@@ -68,7 +68,7 @@
 		{{#each relevantArticles}}
 		<li class="n-storylines__article o-typography-aside__headline--small">
       <a class="n-storylines__article-link" href="https://www.ft.com/content/{{id}}">{{title}}</a>
-		  <p class="o-typography-timestamp">{{timestamp day month year}}</p>
+		  <p class="o-typography-timestamp">{{day}}</p>
     </li>
 		{{/each}}
 	</ul>

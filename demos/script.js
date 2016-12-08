@@ -16,12 +16,19 @@ Promise.all([
 			return date.toLocaleString('en-US', { day: "numeric", month: "long", year: "numeric" });
 		});
 
+		Handlebars.registerHelper('ifEquals', (a, b, options) => {
+				if (a === b) {
+					return options.fn(this);
+				}
+				return options.inverse(this);
+		});
+
 		fetch('../templates/partials/months.html')
 		.then(res => res.text())
 		.then(monthsPartial => {
 			Handlebars.registerPartial('months', monthsPartial)
 		})
-
+		// 
 		// fetch('../templates/partials/years.html')
 		// .then(res => res.text())
 		// .then(yearsPartial => {

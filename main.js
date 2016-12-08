@@ -54,10 +54,15 @@ Promise.all([
 			if (!data.children) return;
 
 			for (let i = 0; i < heatmapSegments.length; i++) {
-				heatmapSegments[i].addEventListener('click', () => {
-					renderStoryline(data.children[i]);
-					setupBackBtn(data);
-				});
+					if (data.children[i].relevantArticles.length > 0) {
+					heatmapSegments[i].addEventListener('click', () => {
+						renderStoryline(data.children[i]);
+						setupBackBtn(data);
+					});
+				} else {
+					let heatmapSegmentsNames = document.querySelectorAll('.n-storylines__heatmap-segment-name')
+					heatmapSegmentsNames[i].classList.add('no-articles')
+				}
 			}
 		}
 

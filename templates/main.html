@@ -13,57 +13,20 @@
 		{{total}} articles published
 	</div>
 
-		<div class="n-storylines__timeline-container">
-
+	<div class="n-storylines__timeline-container">
 		{{#if children.0.children}}
-		<img class="n-storylines__back-btn" src="http://image.webservices.ft.com/v1/images/raw/fticon-v1:arrow-left?source=o-icons"/>
-
-			{{#each children}}
-				<div class="n-storylines__heatmap-segment">
-
-					<ul class="dot-container">
-						{{#if dot}}
-						{{#each dot}}
-						<li class='dot' style='margin-left: {{position}}%'>{{name}}</li>
-						{{/each}}
-						{{/if}}
-					</ul>
-
-					<div class="n-storylines__heatmap-segment-colour" style="opacity: {{weight}};"></div>
-					<p class="n-storylines__heatmap-segment-name o-typography-aside__body--small">{{ name}}</p>
-				</div>
-			{{/each}}
+			{{> partials/years}}
 		{{else if children}}
-
-		<div class="n-storylines__scroll">
-			<img class="n-storylines__back-btn" src="http://image.webservices.ft.com/v1/images/raw/fticon-v1:arrow-left?source=o-icons"/>
-
-		{{#each children}}
-			<div class="n-storylines__heatmap-segment n-storylines__heatmap-segment--all-months ">
-				<ul class="dot-container">
-					{{#if dot}}
-					{{#each dot}}
-					<li class='dot' style="margin-left: {{position}}%">{{name}}</li>
-					{{/each}}
-					{{/if}}
-				</ul>
-						<div class="n-storylines__heatmap-segment-colour n-storylines__all-months" style="opacity: {{weight}};"></div>
-						<p class="n-storylines__heatmap-segment-name o-typography-aside__body--small">{{ name}}</p>
-			</div>
-		{{/each}}
-		</div>
+			{{> partials/months}}
 		{{else}}
-		<img class="n-storylines__back-btn" src="http://image.webservices.ft.com/v1/images/raw/fticon-v1:arrow-left?source=o-icons"/>
-			<div class="n-storylines__heatmap-segment">
-				<div class="n-storylines__heatmap-segment-colour" style="opacity: {{weight}};"></div>
-
-				<p class="n-storylines__heatmap-segment-name o-typography-aside__body--small">{{name}}</p>
-			</div>
+			{{> partials/single-month}}
 		{{/if}}
-	</div>
+		</div>
+
 	<div class="n-storylines__article-header o-typography-aside__body--small">
-		Most popular articles
+		Key articles
 	</div>
+
 	<ul class="n-storylines__top-content">
 		{{#each relevantArticles}}
 		<li class="n-storylines__article o-typography-aside__headline--small">
@@ -72,4 +35,5 @@
     </li>
 		{{/each}}
 	</ul>
+	
 </div>

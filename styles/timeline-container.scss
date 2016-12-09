@@ -17,16 +17,21 @@
   z-index: -1;
 }
 
+.n-storylines__back-btn {
+	background: $background;
+	border: none;
+}
+
 .parent-level {
-	padding: 26px 8px 0 0;
 	@include oTypographySansBold(s);
 	color: $buttonColor;
+	display: inline;
 }
 
 .o-icons-icon {
-	margin: 17px -5px 0 -5px;
-	@include oIconsGetIcon('arrow-left', $buttonColor, 36);
+	@include oIconsGetIcon('arrow-left', $buttonColor, 32);
 }
+
 
 .n-storylines__scroll {
   overflow-x: auto;

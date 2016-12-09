@@ -2,8 +2,8 @@
 	<div class="n-storylines__info o-typography-aside__body">
 		Explore articles of<span>
 		{{#if children.0.children}}
-			{{ children.0.name  }}
-    {{else}}
+			{{children.0.name}}
+		{{else}}
 			{{name}}
 		{{/if}}
 		</span>
@@ -32,10 +32,15 @@
 	<ul class="n-storylines__top-content">
 		{{#each relevantArticles}}
 		<li class="n-storylines__article o-typography-aside__headline--small">
-      <a class="n-storylines__article-link" href="https://www.ft.com/content/{{id}}">{{title}}</a>
-		  <p class="o-typography-timestamp">{{day}}</p>
-    </li>
+			<a class="n-storylines__article-link" href="https://www.ft.com/content/{{id}}">{{title}}</a>
+			<p class="o-typography-timestamp">{{day}}</p>
+		</li>
 		{{/each}}
 	</ul>
 
 </div>
+
+<script type="text/javascript">
+	 window.FT = window.FT || {};
+	 window.FT.storylineData = {{{json this}}};
+</script>

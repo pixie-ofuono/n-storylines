@@ -1,56 +1,55 @@
-// @include oGridRespondTo(L) {
-	.n-storylines__article {
-	  position:relative;
-	  margin: -5px 0 25px;
-	  font-size: 18px;
-	  line-height: 20px;
-	}
+$opaque: rgba(0,0,0,0.6);
 
-	.n-storylines__article::before {
-	  counter-increment: list;
-	  content: counter(list);
-	  position: absolute;
-	  font: 14px/15px MetricWeb, sans-serif;
-	  color: oColorsGetPaletteColor('pink');
-	  left: -35px;
-	  top: 2px;
-	  text-align: center;
-	  background-color: oColorsGetPaletteColor('warm-4');
-	  border-radius: 100%;
-	  height: 15px;
-	  width: 15px;
-	  padding: 5px;
-	}
+.n-storylines__article {
+  position:relative;
+	margin-bottom: 20px;
+}
 
-	.n-storylines__top-content {
-	  counter-reset: list;
-	  list-style-type: none;
-	  width: 85%;
-	  margin-top: 20px;
-	  position: relative;
-	}
+.n-storylines__article::before {
+  counter-increment: list;
+  content: counter(list);
+  position: absolute;
+  font: 14px/15px MetricWeb, sans-serif;
+  color: oColorsGetPaletteColor('pink');
+  left: -35px;
+  top: 2px;
+  text-align: center;
+  background-color: oColorsGetPaletteColor('warm-4');
+  border-radius: 100%;
+  height: 15px;
+  width: 15px;
+  padding: 5px;
+}
 
-	.n-storylines__top-content::before {
-	  content: '';
-	  position: absolute;
-	  border-left: 1px solid oColorsGetPaletteColor('pink-tint3');
-	  top: 5px;
-	  bottom: 35px;
-	  left: 17px;
-	  margin: 0;
-	}
-// }
+.n-storylines__top-content {
+  counter-reset: list;
+  width: 85%;
+  position: relative;
+}
 
+.n-storylines__top-content::before {
+  content: '';
+  position: absolute;
+  border-left: 1px solid oColorsGetPaletteColor('pink-tint3');
+  top: 5px;
+  bottom: 35px;
+  left: 17px;
+  margin: 0;
+}
 
-.n-storylines__article>.o-typography-timestamp {
-  margin-top: 5px;
-  font-size: 14px;
-  color: rgba(0,0,0,0.60);
+p {
+	margin: 0;
+}
+
+.n-storyline-timestamp {
+	@include oTypographySansData(m);
+	color: $opaque;
 }
 
 .n-storylines__article-link {
-  text-decoration: none;
+	@include oTypographySerifDisplay(m);
   color: oColorsGetPaletteColor('cold-1');
+	text-decoration: none;
 }
 
 .n-storylines__article-link:focus {
@@ -59,5 +58,6 @@
 }
 
 .n-storylines__article-header {
-  margin-top: 40px;
+	@include oTypographySansData(m);
+	color: $opaque;
 }

@@ -8,13 +8,12 @@
 		{{/if}}
 	</div>
 
-	<div class="n-storylines__content-count o-typography-aside__body--small">
+	<div class="n-storylines__content-count">
 		{{total}} articles published
 	</div>
 
 	<div class="n-storylines__timeline-container">
 		<i class="n-storylines__back-btn o-icons-icon o-icons-icon--arrow-left"></i>
-
 		{{#if children.0.children}}
 			{{> partials/years}}
 		{{else if children}}
@@ -24,15 +23,15 @@
 		{{/if}}
 		</div>
 
-	<div class="n-storylines__article-header o-typography-aside__body--small">
+	<div class="n-storylines__article-header">
 		Key articles
 	</div>
 
 	<ul class="n-storylines__top-content">
 		{{#each relevantArticles}}
-		<li class="n-storylines__article o-typography-aside__headline--small">
+		<li class="n-storylines__article">
 			<a class="n-storylines__article-link" href="https://www.ft.com/content/{{id}}">{{title}}</a>
-			<p class="o-typography-timestamp">{{day}}</p>
+			<p class="n-storyline-timestamp">{{day}} {{month}} {{year}}</p>
 		</li>
 		{{/each}}
 	</ul>

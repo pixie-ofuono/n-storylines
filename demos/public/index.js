@@ -145,23 +145,27 @@
 	},"12":function(container,depth0,helpers,partials,data) {
 	    var alias1=container.lambda, alias2=container.escapeExpression;
 	
-	  return "		<li class=\"n-storylines__article o-typography-aside__headline--small\">\n			<a class=\"n-storylines__article-link\" href=\"https://www.ft.com/content/"
+	  return "		<li class=\"n-storylines__article\">\n			<a class=\"n-storylines__article-link\" href=\"https://www.ft.com/content/"
 	    + alias2(alias1((depth0 != null ? depth0.id : depth0), depth0))
 	    + "\">"
 	    + alias2(alias1((depth0 != null ? depth0.title : depth0), depth0))
-	    + "</a>\n			<p class=\"o-typography-timestamp\">"
+	    + "</a>\n			<p class=\"n-storyline-timestamp\">"
 	    + alias2(alias1((depth0 != null ? depth0.day : depth0), depth0))
+	    + " "
+	    + alias2(alias1((depth0 != null ? depth0.month : depth0), depth0))
+	    + " "
+	    + alias2(alias1((depth0 != null ? depth0.year : depth0), depth0))
 	    + "</p>\n		</li>\n";
 	},"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
 	    var stack1, alias1=depth0 != null ? depth0 : {};
 	
 	  return "<div class=\"n-storylines\">\n	<div class=\"n-storylines__info\">\n		Explore articles of\n"
 	    + ((stack1 = helpers["if"].call(alias1,((stack1 = ((stack1 = (depth0 != null ? depth0.children : depth0)) != null ? stack1["0"] : stack1)) != null ? stack1.children : stack1),{"name":"if","hash":{},"fn":container.program(1, data, 0),"inverse":container.program(3, data, 0),"data":data})) != null ? stack1 : "")
-	    + "	</div>\n\n	<div class=\"n-storylines__content-count o-typography-aside__body--small\">\n		"
+	    + "	</div>\n\n	<div class=\"n-storylines__content-count\">\n		"
 	    + container.escapeExpression(container.lambda((depth0 != null ? depth0.total : depth0), depth0))
-	    + " articles published\n	</div>\n\n	<div class=\"n-storylines__timeline-container\">\n		<i class=\"n-storylines__back-btn o-icons-icon o-icons-icon--arrow-left\"></i>\n\n"
+	    + " articles published\n	</div>\n\n	<div class=\"n-storylines__timeline-container\">\n		<i class=\"n-storylines__back-btn o-icons-icon o-icons-icon--arrow-left\"></i>\n"
 	    + ((stack1 = helpers["if"].call(alias1,((stack1 = ((stack1 = (depth0 != null ? depth0.children : depth0)) != null ? stack1["0"] : stack1)) != null ? stack1.children : stack1),{"name":"if","hash":{},"fn":container.program(5, data, 0),"inverse":container.program(7, data, 0),"data":data})) != null ? stack1 : "")
-	    + "		</div>\n\n	<div class=\"n-storylines__article-header o-typography-aside__body--small\">\n		Key articles\n	</div>\n\n	<ul class=\"n-storylines__top-content\">\n"
+	    + "		</div>\n\n	<div class=\"n-storylines__article-header\">\n		Key articles\n	</div>\n\n	<ul class=\"n-storylines__top-content\">\n"
 	    + ((stack1 = helpers.each.call(alias1,(depth0 != null ? depth0.relevantArticles : depth0),{"name":"each","hash":{},"fn":container.program(12, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
 	    + "	</ul>\n\n</div>\n\n<script type=\"text/javascript\">\n	 window.FT = window.FT || {};\n	 window.FT.storylineData = "
 	    + ((stack1 = __default(__webpack_require__(25)).call(alias1,depth0,{"name":"json","hash":{},"data":data})) != null ? stack1 : "")
@@ -1372,7 +1376,7 @@
 	    + ((stack1 = helpers["if"].call(alias1,(depth0 != null ? depth0.dot : depth0),{"name":"if","hash":{},"fn":container.program(2, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
 	    + "		</ul>\n		<div class=\"n-storylines__heatmap-segment-colour\" style=\"opacity: "
 	    + alias4(((helper = (helper = helpers.weight || (depth0 != null ? depth0.weight : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"weight","hash":{},"data":data}) : helper)))
-	    + ";\"></div>\n		<p class=\"n-storylines__heatmap-segment-name o-typography-aside__body--small\">"
+	    + ";\"></div>\n		<p class=\"n-storylines__heatmap-segment-name\">"
 	    + alias4(((helper = (helper = helpers.name || (depth0 != null ? depth0.name : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"name","hash":{},"data":data}) : helper)))
 	    + "</p>\n	</div>\n";
 	},"2":function(container,depth0,helpers,partials,data) {
@@ -1406,7 +1410,7 @@
 	    + ((stack1 = helpers["if"].call(alias1,(depth0 != null ? depth0.dot : depth0),{"name":"if","hash":{},"fn":container.program(2, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
 	    + "		</ul>\n				<div class=\"n-storylines__heatmap-segment-colour n-storylines__all-months\" style=\"opacity: "
 	    + alias4(((helper = (helper = helpers.weight || (depth0 != null ? depth0.weight : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"weight","hash":{},"data":data}) : helper)))
-	    + ";\"></div>\n				<p class=\"n-storylines__heatmap-segment-name o-typography-aside__body--small\">"
+	    + ";\"></div>\n				<p class=\"n-storylines__heatmap-segment-name\">"
 	    + alias4(((helper = (helper = helpers.name || (depth0 != null ? depth0.name : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"name","hash":{},"data":data}) : helper)))
 	    + "</p>\n	</div>\n";
 	},"2":function(container,depth0,helpers,partials,data) {
@@ -1440,7 +1444,7 @@
 	
 	  return "<div class=\"parent-level\">Months</div>\n<div class=\"n-storylines__heatmap-segment\">\n	<div class=\"n-storylines__heatmap-segment-colour\" style=\"opacity: "
 	    + alias4(((helper = (helper = helpers.weight || (depth0 != null ? depth0.weight : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"weight","hash":{},"data":data}) : helper)))
-	    + ";\"></div>\n	<p class=\"n-storylines__heatmap-segment-name o-typography-aside__body--small\">"
+	    + ";\"></div>\n	<p class=\"n-storylines__heatmap-segment-name\">"
 	    + alias4(((helper = (helper = helpers.name || (depth0 != null ? depth0.name : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"name","hash":{},"data":data}) : helper)))
 	    + "</p>\n</div>\n";
 	},"useData":true});

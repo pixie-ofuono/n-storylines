@@ -1,5 +1,7 @@
 $o-grid-is-silent: false;
+$o-typography-is-silent: false;
 
+@import 'o-typography/main';
 @import 'o-grid/main';
 @import 'o-colors/main';
 @import 'o-icons/main';
@@ -13,7 +15,6 @@ $o-grid-is-silent: false;
 body {
   width: 85%;
   background: oColorsGetPaletteColor('warm-1');
-  font-family: MetricWeb;
   margin: 0 auto;
 }
 
@@ -23,11 +24,13 @@ body {
 }
 
 .n-storylines__info {
-	font-family: oTypographySans(m);
+	@include oTypographySans(m);
   margin: 8px 0;
 }
 
 .n-storylines__content-count {
+	@include oTypographySansData(m)
+	color: rgba(0, 0, 0, 0.6);
   float: left;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }

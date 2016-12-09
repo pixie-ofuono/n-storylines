@@ -2,6 +2,7 @@
   display: flex;
   position: relative;
   width: 100%;
+	margin-bottom: 20px;
   background: oColorsGetPaletteColor('warm-1');
 }
 
@@ -18,13 +19,13 @@
 
 .parent-level {
 	padding: 26px 8px 0 0;
-	font-family: oTypographySansBold(s);
-	color: oColorsGetPaletteColor(teal-1);
+	@include oTypographySansBold(s);
+	color: oColorsGetPaletteColor('teal-1');
 }
 
 .n-storylines__back-btn {
-	margin-top: 19px;
-	@include oIconsGetIcon('arrow-left', oColorsGetPaletteColor('teal-1'), 32);
+	margin: 17px -5px 0 -5px;
+	@include oIconsGetIcon('arrow-left', oColorsGetPaletteColor('teal-1'), 36);
 }
 
 .n-storylines__scroll {

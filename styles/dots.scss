@@ -7,6 +7,7 @@
 }
 
 .dot {
+	@include oTypographySansData(xs)
   position: absolute;
   background: oColorsGetPaletteColor('warm-4');
   top: -10px;

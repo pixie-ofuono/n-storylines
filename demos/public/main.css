@@ -2535,44 +2535,39 @@ html:after {
     max-width: 100%;
     width: 100%;
   }
-}@media (min-width: 46.25em) {
-  .n-storylines__article {
-    position: relative;
-    margin: -5px 0 25px;
-    font-size: 18px;
-    line-height: 20px;
-  }
-  .n-storylines__article::before {
-    counter-increment: list;
-    content: counter(list);
-    position: absolute;
-    font: 14px/15px MetricWeb, sans-serif;
-    color: #fff1e0;
-    left: -35px;
-    top: 2px;
-    text-align: center;
-    background-color: #333;
-    border-radius: 100%;
-    height: 15px;
-    width: 15px;
-    padding: 5px;
-  }
-  .n-storylines__top-content {
-    counter-reset: list;
-    list-style-type: none;
-    width: 85%;
-    margin-top: 20px;
-    position: relative;
-  }
-  .n-storylines__top-content::before {
-    content: '';
-    position: absolute;
-    border-left: 1px solid #cec6b9;
-    top: 5px;
-    bottom: 35px;
-    left: 17px;
-    margin: 0;
-  }
+}.n-storylines__article {
+  position: relative;
+  margin: -5px 0 25px;
+  font-size: 18px;
+  line-height: 20px;
+}.n-storylines__article::before {
+  counter-increment: list;
+  content: counter(list);
+  position: absolute;
+  font: 14px/15px MetricWeb, sans-serif;
+  color: #fff1e0;
+  left: -35px;
+  top: 2px;
+  text-align: center;
+  background-color: #1d1d1d;
+  border-radius: 100%;
+  height: 15px;
+  width: 15px;
+  padding: 5px;
+}.n-storylines__top-content {
+  counter-reset: list;
+  list-style-type: none;
+  width: 85%;
+  margin-top: 20px;
+  position: relative;
+}.n-storylines__top-content::before {
+  content: '';
+  position: absolute;
+  border-left: 1px solid #cec6b9;
+  top: 5px;
+  bottom: 35px;
+  left: 17px;
+  margin: 0;
 }.n-storylines__article > .o-typography-timestamp {
   margin-top: 5px;
   font-size: 14px;
@@ -2582,7 +2577,7 @@ html:after {
   color: #505050;
 }.n-storylines__article-link:focus {
   cursor: pointer;
-  color: #777;
+  color: #777777;
 }.n-storylines__article-header {
   margin-top: 40px;
 }.n-storylines__timeline-container {
@@ -2591,7 +2586,7 @@ html:after {
   display: flex;
   position: relative;
   width: 100%;
-  background: #fbe9da;
+  background: #ffe9d7;
 }.n-storylines__timeline-container:before {
   border-top: 1px solid #cec6b9;
   content: "";
@@ -2601,6 +2596,10 @@ html:after {
   left: -30%;
   width: 150%;
   z-index: -1;
+}.parent-level {
+  padding: 26px 8px 0 0;
+  font-family: MetricSemibold;
+  color: #26747a;
 }.n-storylines__back-btn {
   margin-top: 19px;
   background-image: url("https://www.ft.com/__origami/service/image/v2/images/raw/fticon-v1:arrow-left?source=o-icons&tint=%2326747A,%2326747A&format=svg");
@@ -2620,7 +2619,7 @@ html:after {
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  background: #fbe9da;
+  background: #ffe9d7;
   width: 100%;
 }.n-storylines__heatmap-segment {
   width: 100%;
@@ -2628,7 +2627,7 @@ html:after {
   text-align: center;
 }.n-storylines__heatmap-segment-colour,
 .n-storylines__heatmap-segment-none {
-  background: #B11F42;
+  background: #9e2f50;
   width: 100%;
   height: 50px;
   display: -webkit-flex;
@@ -2643,7 +2642,7 @@ html:after {
   position: absolute;
   top: -95%;
   left: 45%;
-  background-color: #fbe9da;
+  background-color: #ffe9d7;
   border: 1px solid rgba(0, 0, 0, 0.6);
   border-radius: 100%;
   height: 9px;
@@ -2674,11 +2673,11 @@ html:after {
   margin-right: -4%;
 }body {
   width: 85%;
-  background: #fbe9da;
+  background: #ffe9d7;
   font-family: MetricWeb;
   margin: 0 auto;
 }.n-storylines {
-  border-top: 8px solid #000;
+  border-top: 8px solid #000000;
   border-bottom: 1px solid #cec6b9;
 }.n-storylines__info {
   margin: 8px 0;

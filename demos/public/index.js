@@ -1362,13 +1362,13 @@
 	module.exports = (Handlebars["default"] || Handlebars).template({"1":function(container,depth0,helpers,partials,data) {
 	    var stack1, helper, alias1=depth0 != null ? depth0 : {}, alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
 	
-	  return "		<div class=\"n-storylines__heatmap-segment\">\n\n			<ul class=\"dot-container\">\n"
+	  return "	<div class=\"n-storylines__heatmap-segment\">\n		<ul class=\"dot-container\">\n"
 	    + ((stack1 = helpers["if"].call(alias1,(depth0 != null ? depth0.dot : depth0),{"name":"if","hash":{},"fn":container.program(2, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
-	    + "			</ul>\n\n			<div class=\"n-storylines__heatmap-segment-colour\" style=\"opacity: "
+	    + "		</ul>\n		<div class=\"n-storylines__heatmap-segment-colour\" style=\"opacity: "
 	    + alias4(((helper = (helper = helpers.weight || (depth0 != null ? depth0.weight : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"weight","hash":{},"data":data}) : helper)))
-	    + ";\"></div>\n			<p class=\"n-storylines__heatmap-segment-name o-typography-aside__body--small\">"
+	    + ";\"></div>\n		<p class=\"n-storylines__heatmap-segment-name o-typography-aside__body--small\">"
 	    + alias4(((helper = (helper = helpers.name || (depth0 != null ? depth0.name : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"name","hash":{},"data":data}) : helper)))
-	    + "</p>\n		</div>\n";
+	    + "</p>\n	</div>\n";
 	},"2":function(container,depth0,helpers,partials,data) {
 	    var stack1;
 	
@@ -1396,13 +1396,13 @@
 	module.exports = (Handlebars["default"] || Handlebars).template({"1":function(container,depth0,helpers,partials,data) {
 	    var stack1, helper, alias1=depth0 != null ? depth0 : {}, alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
 	
-	  return "			<div class=\"n-storylines__heatmap-segment n-storylines__heatmap-segment--all-months \">\n				<ul class=\"dot-container\">\n"
+	  return "	<div class=\"n-storylines__heatmap-segment n-storylines__heatmap-segment--all-months \">\n		<ul class=\"dot-container\">\n"
 	    + ((stack1 = helpers["if"].call(alias1,(depth0 != null ? depth0.dot : depth0),{"name":"if","hash":{},"fn":container.program(2, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
-	    + "				</ul>\n						<div class=\"n-storylines__heatmap-segment-colour n-storylines__all-months\" style=\"opacity: "
+	    + "		</ul>\n				<div class=\"n-storylines__heatmap-segment-colour n-storylines__all-months\" style=\"opacity: "
 	    + alias4(((helper = (helper = helpers.weight || (depth0 != null ? depth0.weight : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"weight","hash":{},"data":data}) : helper)))
-	    + ";\"></div>\n						<p class=\"n-storylines__heatmap-segment-name o-typography-aside__body--small\">"
+	    + ";\"></div>\n				<p class=\"n-storylines__heatmap-segment-name o-typography-aside__body--small\">"
 	    + alias4(((helper = (helper = helpers.name || (depth0 != null ? depth0.name : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"name","hash":{},"data":data}) : helper)))
-	    + "</p>\n			</div>\n";
+	    + "</p>\n	</div>\n";
 	},"2":function(container,depth0,helpers,partials,data) {
 	    var stack1;
 	
@@ -1410,7 +1410,7 @@
 	},"3":function(container,depth0,helpers,partials,data) {
 	    var helper, alias1=depth0 != null ? depth0 : {}, alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
 	
-	  return "					<li class='dot' style=\"margin-left: "
+	  return "				<li class='dot' style=\"margin-left: "
 	    + alias4(((helper = (helper = helpers.position || (depth0 != null ? depth0.position : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"position","hash":{},"data":data}) : helper)))
 	    + "%\">"
 	    + alias4(((helper = (helper = helpers.name || (depth0 != null ? depth0.name : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"name","hash":{},"data":data}) : helper)))
@@ -1418,9 +1418,9 @@
 	},"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
 	    var stack1;
 	
-	  return "\n		<div class=\"n-storylines__scroll\">\n			<!-- <img class=\"n-storylines__back-btn\" src=\"http://image.webservices.ft.com/v1/images/raw/fticon-v1:arrow-left?source=o-icons\"/> -->\n"
+	  return "<div class=\"parent-level\">Years</div>\n<div class=\"n-storylines__scroll\">\n"
 	    + ((stack1 = helpers.each.call(depth0 != null ? depth0 : {},(depth0 != null ? depth0.children : depth0),{"name":"each","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
-	    + "		</div>\n";
+	    + "</div>\n";
 	},"useData":true});
 
 /***/ },
@@ -1432,11 +1432,11 @@
 	module.exports = (Handlebars["default"] || Handlebars).template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
 	    var helper, alias1=depth0 != null ? depth0 : {}, alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
 	
-	  return "<!-- <img class=\"n-storylines__back-btn\" src=\"http://image.webservices.ft.com/v1/images/raw/fticon-v1:arrow-left?source=o-icons\"/> -->\n	<div class=\"n-storylines__heatmap-segment\">\n		<div class=\"n-storylines__heatmap-segment-colour\" style=\"opacity: "
+	  return "<div class=\"parent-level\">Months</div>\n<div class=\"n-storylines__heatmap-segment\">\n	<div class=\"n-storylines__heatmap-segment-colour\" style=\"opacity: "
 	    + alias4(((helper = (helper = helpers.weight || (depth0 != null ? depth0.weight : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"weight","hash":{},"data":data}) : helper)))
-	    + ";\"></div>\n\n		<p class=\"n-storylines__heatmap-segment-name o-typography-aside__body--small\">"
+	    + ";\"></div>\n	<p class=\"n-storylines__heatmap-segment-name o-typography-aside__body--small\">"
 	    + alias4(((helper = (helper = helpers.name || (depth0 != null ? depth0.name : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"name","hash":{},"data":data}) : helper)))
-	    + "</p>\n	</div>\n";
+	    + "</p>\n</div>\n";
 	},"useData":true});
 
 /***/ },

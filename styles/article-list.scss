@@ -11,11 +11,11 @@
 	  content: counter(list);
 	  position: absolute;
 	  font: 14px/15px MetricWeb, sans-serif;
-	  color: #fff1e0;
+	  color: oColorsGetPaletteColor('pink');
 	  left: -35px;
 	  top: 2px;
 	  text-align: center;
-	  background-color: #333;
+	  background-color: oColorsGetPaletteColor('warm-4');
 	  border-radius: 100%;
 	  height: 15px;
 	  width: 15px;
@@ -33,7 +33,7 @@
 	.n-storylines__top-content::before {
 	  content: '';
 	  position: absolute;
-	  border-left: 1px solid #cec6b9;
+	  border-left: 1px solid oColorsGetPaletteColor('pink-tint3');
 	  top: 5px;
 	  bottom: 35px;
 	  left: 17px;
@@ -50,12 +50,12 @@
 
 .n-storylines__article-link {
   text-decoration: none;
-  color: #505050;
+  color: oColorsGetPaletteColor('cold-1');
 }
 
 .n-storylines__article-link:focus {
   cursor: pointer;
-  color: #777;
+  color: oColorsGetPaletteColor('grey-tint3');
 }
 
 .n-storylines__article-header {

@@ -7,7 +7,7 @@
 
 .n-storylines__heatmap-segment-colour,
 .n-storylines__heatmap-segment-none {
-  background: #B11F42;
+  background: oColorsGetPaletteColor('claret');
   width: 100%;
   height: 50px;
   display: flex;
@@ -24,7 +24,7 @@
   position: absolute;
   top: -95%;
   left: 45%;
-  background-color: #fbe9da;
+  background-color: oColorsGetPaletteColor('warm-1');
   border: 1px solid rgba(0, 0, 0, 0.6);
   border-radius: 100%;
   height: 9px;

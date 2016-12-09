@@ -2,11 +2,11 @@
   display: flex;
   position: relative;
   width: 100%;
-  background: #fbe9da;
+  background: oColorsGetPaletteColor('warm-1');
 }
 
 .n-storylines__timeline-container:before {
-  border-top: 1px solid #cec6b9;
+  border-top: 1px solid oColorsGetPaletteColor('pink-tint3');
   content: "";
   margin: 0 auto;
   position: absolute;
@@ -14,6 +14,12 @@
   left: -30%;
   width: 150%;
   z-index: -1;
+}
+
+.parent-level {
+	padding: 26px 8px 0 0;
+	font-family: MetricSemibold;
+	color: oColorsGetPaletteColor(teal-1);
 }
 
 .n-storylines__back-btn {
@@ -26,6 +32,6 @@
   white-space: nowrap;
   display: flex;
   position: relative;
-  background: #fbe9da;
+  background:  oColorsGetPaletteColor('warm-1');
 	width: 100%;
 }

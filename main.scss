@@ -1,7 +1,9 @@
 $o-grid-is-silent: false;
+
 @import 'o-grid/main';
 @import 'o-colors/main';
 @import 'o-icons/main';
+
 @import 'styles/article-list';
 @import 'styles/timeline-container';
 @import 'styles/heatmap';
@@ -10,14 +12,14 @@ $o-grid-is-silent: false;
 
 body {
   width: 85%;
-  background: #fbe9da;
+  background: oColorsGetPaletteColor('warm-1');
   font-family: MetricWeb;
   margin: 0 auto;
 }
 
 .n-storylines {
-  border-top: 8px solid #000;
-  border-bottom: 1px solid #cec6b9;
+  border-top: 8px solid oColorsGetPaletteColor('black');
+  border-bottom: 1px solid oColorsGetPaletteColor('pink-tint3');
 }
 
 .n-storylines__info {

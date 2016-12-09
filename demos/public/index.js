@@ -46,12 +46,15 @@
 
 	const main = __webpack_require__(1);
 	const template = __webpack_require__(2);
+	const decorate = __webpack_require__(26);
 	
 	fetch('./N2FkZjRhMWUtZDZjNS00ZTQ0LTg1MTMtMjYyYzBlODkzYTQ2-UE4=.json')
 		.then(res => res.json())
 		.then(data => {
-			document.body.innerHTML = template(data);
-			main.init(data);
+			const initialData = decorate(data);
+			document.body.innerHTML = template(initialData);
+			window.FT = { storylineData: initialData };
+			main.init();
 		});
 
 
@@ -60,17 +63,18 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	const template = __webpack_require__(2);
-	const yearDots = __webpack_require__(22);
 	
-	function init(initialData) {
+	function init () {
+		const initialData = window && window.FT && window.FT.storylineData;
+		if (!initialData) return;
+	
 		const component = document.querySelector('.n-storylines');
 		const heatmapSegments = document.getElementsByClassName('n-storylines__heatmap-segment-colour');
 		const backBtns = document.getElementsByClassName('n-storylines__back-btn');
-		const dotData = yearDots(initialData);
 	
-		setupInteraction(dotData);
+		setupInteraction(initialData);
 	
-		function setupInteraction(data) {
+		function setupInteraction (data) {
 			backBtns[0].style.display = data === initialData ? 'none' : '';
 			if (!data.children) return;
 	
@@ -87,21 +91,22 @@
 			}
 		}
 	
-		function renderStoryline(data) {
+		function renderStoryline (data) {
 			component.innerHTML = template(data);
 			setupInteraction(data);
 		}
 	
-		function setupBackBtn(data) {
+		function setupBackBtn (data) {
 			backBtns[0].addEventListener('click', () => {
 				renderStoryline(data);
-				setupBackBtn(dotData);
+				setupBackBtn(initialData);
 			});
 		}
 	}
 	
 	module.exports = {
-		init
+		init,
+		decorate: __webpack_require__(26)
 	};
 
 
@@ -118,37 +123,35 @@
 	    + container.escapeExpression(container.lambda(((stack1 = ((stack1 = (depth0 != null ? depth0.children : depth0)) != null ? stack1["0"] : stack1)) != null ? stack1.name : stack1), depth0))
 	    + "\n";
 	},"3":function(container,depth0,helpers,partials,data) {
-	    var helper;
-	
-	  return "			"
-	    + container.escapeExpression(((helper = (helper = helpers.name || (depth0 != null ? depth0.name : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : {},{"name":"name","hash":{},"data":data}) : helper)))
+	    return "			"
+	    + container.escapeExpression(container.lambda((depth0 != null ? depth0.name : depth0), depth0))
 	    + "\n";
 	},"5":function(container,depth0,helpers,partials,data) {
 	    var stack1;
 	
-	  return "		<img class=\"n-storylines__back-btn\" src=\"http://image.webservices.ft.com/v1/images/raw/fticon-v1:arrow-left?source=o-icons\"/>\n\n"
+	  return "			<img class=\"n-storylines__back-btn\" src=\"https://www.ft.com/__origami/service/image/v2/images/raw/fticon-v1:arrow-left?source=o-icons\"/>\n\n"
 	    + ((stack1 = helpers.each.call(depth0 != null ? depth0 : {},(depth0 != null ? depth0.children : depth0),{"name":"each","hash":{},"fn":container.program(6, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "");
 	},"6":function(container,depth0,helpers,partials,data) {
-	    var stack1, helper, alias1=depth0 != null ? depth0 : {}, alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
+	    var stack1, alias1=container.lambda, alias2=container.escapeExpression;
 	
-	  return "				<div class=\"n-storylines__heatmap-segment\">\n\n					<ul class=\"dot-container\">\n"
-	    + ((stack1 = helpers["if"].call(alias1,(depth0 != null ? depth0.dot : depth0),{"name":"if","hash":{},"fn":container.program(7, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
-	    + "					</ul>\n\n					<div class=\"n-storylines__heatmap-segment-colour\" style=\"opacity: "
-	    + alias4(((helper = (helper = helpers.weight || (depth0 != null ? depth0.weight : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"weight","hash":{},"data":data}) : helper)))
-	    + ";\"></div>\n					<p class=\"n-storylines__heatmap-segment-name o-typography-aside__body--small\">"
-	    + alias4(((helper = (helper = helpers.name || (depth0 != null ? depth0.name : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"name","hash":{},"data":data}) : helper)))
-	    + "</p>\n				</div>\n";
+	  return "			<div class=\"n-storylines__heatmap-segment\">\n\n				<ul class=\"dot-container\">\n"
+	    + ((stack1 = helpers["if"].call(depth0 != null ? depth0 : {},(depth0 != null ? depth0.dot : depth0),{"name":"if","hash":{},"fn":container.program(7, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
+	    + "				</ul>\n\n				<div class=\"n-storylines__heatmap-segment-colour\" style=\"opacity: "
+	    + alias2(alias1((depth0 != null ? depth0.weight : depth0), depth0))
+	    + ";\"></div>\n				<p class=\"n-storylines__heatmap-segment-name o-typography-aside__body--small\">"
+	    + alias2(alias1((depth0 != null ? depth0.name : depth0), depth0))
+	    + "</p>\n			</div>\n";
 	},"7":function(container,depth0,helpers,partials,data) {
 	    var stack1;
 	
 	  return ((stack1 = helpers.each.call(depth0 != null ? depth0 : {},(depth0 != null ? depth0.dot : depth0),{"name":"each","hash":{},"fn":container.program(8, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "");
 	},"8":function(container,depth0,helpers,partials,data) {
-	    var helper, alias1=depth0 != null ? depth0 : {}, alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
+	    var alias1=container.lambda, alias2=container.escapeExpression;
 	
-	  return "						<li class='dot' style='margin-left: "
-	    + alias4(((helper = (helper = helpers.position || (depth0 != null ? depth0.position : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"position","hash":{},"data":data}) : helper)))
+	  return "					<li class='dot' style='margin-left: "
+	    + alias2(alias1((depth0 != null ? depth0.position : depth0), depth0))
 	    + "%'>"
-	    + alias4(((helper = (helper = helpers.name || (depth0 != null ? depth0.name : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"name","hash":{},"data":data}) : helper)))
+	    + alias2(alias1((depth0 != null ? depth0.name : depth0), depth0))
 	    + "</li>\n";
 	},"10":function(container,depth0,helpers,partials,data) {
 	    var stack1;
@@ -157,61 +160,63 @@
 	},"11":function(container,depth0,helpers,partials,data) {
 	    var stack1;
 	
-	  return "\n		<div class=\"n-storylines__scroll\">\n			<img class=\"n-storylines__back-btn\" src=\"http://image.webservices.ft.com/v1/images/raw/fticon-v1:arrow-left?source=o-icons\"/>\n\n"
+	  return "			<div class=\"n-storylines__scroll\">\n			<img class=\"n-storylines__back-btn\" src=\"https://www.ft.com/__origami/service/image/v2/images/raw/fticon-v1:arrow-left?source=o-icons\"/>\n\n"
 	    + ((stack1 = helpers.each.call(depth0 != null ? depth0 : {},(depth0 != null ? depth0.children : depth0),{"name":"each","hash":{},"fn":container.program(12, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
 	    + "		</div>\n";
 	},"12":function(container,depth0,helpers,partials,data) {
-	    var stack1, helper, alias1=depth0 != null ? depth0 : {}, alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
+	    var stack1, alias1=container.lambda, alias2=container.escapeExpression;
 	
 	  return "			<div class=\"n-storylines__heatmap-segment n-storylines__heatmap-segment--all-months \">\n				<ul class=\"dot-container\">\n"
-	    + ((stack1 = helpers["if"].call(alias1,(depth0 != null ? depth0.dot : depth0),{"name":"if","hash":{},"fn":container.program(13, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
-	    + "				</ul>\n						<div class=\"n-storylines__heatmap-segment-colour n-storylines__all-months\" style=\"opacity: "
-	    + alias4(((helper = (helper = helpers.weight || (depth0 != null ? depth0.weight : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"weight","hash":{},"data":data}) : helper)))
-	    + ";\"></div>\n						<p class=\"n-storylines__heatmap-segment-name o-typography-aside__body--small\">"
-	    + alias4(((helper = (helper = helpers.name || (depth0 != null ? depth0.name : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"name","hash":{},"data":data}) : helper)))
+	    + ((stack1 = helpers["if"].call(depth0 != null ? depth0 : {},(depth0 != null ? depth0.dot : depth0),{"name":"if","hash":{},"fn":container.program(13, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
+	    + "				</ul>\n				<div class=\"n-storylines__heatmap-segment-colour n-storylines__all-months\" style=\"opacity: "
+	    + alias2(alias1((depth0 != null ? depth0.weight : depth0), depth0))
+	    + ";\"></div>\n				<p class=\"n-storylines__heatmap-segment-name o-typography-aside__body--small\">"
+	    + alias2(alias1((depth0 != null ? depth0.name : depth0), depth0))
 	    + "</p>\n			</div>\n";
 	},"13":function(container,depth0,helpers,partials,data) {
 	    var stack1;
 	
 	  return ((stack1 = helpers.each.call(depth0 != null ? depth0 : {},(depth0 != null ? depth0.dot : depth0),{"name":"each","hash":{},"fn":container.program(14, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "");
 	},"14":function(container,depth0,helpers,partials,data) {
-	    var helper, alias1=depth0 != null ? depth0 : {}, alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
+	    var alias1=container.lambda, alias2=container.escapeExpression;
 	
-	  return "					<li class='dot' style=\"margin-left: "
-	    + alias4(((helper = (helper = helpers.position || (depth0 != null ? depth0.position : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"position","hash":{},"data":data}) : helper)))
+	  return "						<li class='dot' style=\"margin-left: "
+	    + alias2(alias1((depth0 != null ? depth0.position : depth0), depth0))
 	    + "%\">"
-	    + alias4(((helper = (helper = helpers.name || (depth0 != null ? depth0.name : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"name","hash":{},"data":data}) : helper)))
+	    + alias2(alias1((depth0 != null ? depth0.name : depth0), depth0))
 	    + "</li>\n";
 	},"16":function(container,depth0,helpers,partials,data) {
-	    var helper, alias1=depth0 != null ? depth0 : {}, alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
+	    var alias1=container.lambda, alias2=container.escapeExpression;
 	
-	  return "		<img class=\"n-storylines__back-btn\" src=\"http://image.webservices.ft.com/v1/images/raw/fticon-v1:arrow-left?source=o-icons\"/>\n			<div class=\"n-storylines__heatmap-segment\">\n				<div class=\"n-storylines__heatmap-segment-colour\" style=\"opacity: "
-	    + alias4(((helper = (helper = helpers.weight || (depth0 != null ? depth0.weight : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"weight","hash":{},"data":data}) : helper)))
-	    + ";\"></div>\n\n				<p class=\"n-storylines__heatmap-segment-name o-typography-aside__body--small\">"
-	    + alias4(((helper = (helper = helpers.name || (depth0 != null ? depth0.name : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"name","hash":{},"data":data}) : helper)))
+	  return "			<img class=\"n-storylines__back-btn\" src=\"https://www.ft.com/__origami/service/image/v2/images/raw/fticon-v1:arrow-left?source=o-icons\"/>\n			<div class=\"n-storylines__heatmap-segment\">\n				<div class=\"n-storylines__heatmap-segment-colour\" style=\"opacity: "
+	    + alias2(alias1((depth0 != null ? depth0.weight : depth0), depth0))
+	    + ";\"></div>\n				<p class=\"n-storylines__heatmap-segment-name o-typography-aside__body--small\">"
+	    + alias2(alias1((depth0 != null ? depth0.name : depth0), depth0))
 	    + "</p>\n			</div>\n		";
 	},"18":function(container,depth0,helpers,partials,data) {
-	    var helper, alias1=depth0 != null ? depth0 : {}, alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
+	    var alias1=container.lambda, alias2=container.escapeExpression;
 	
-	  return "		<li class=\"n-storylines__article o-typography-aside__headline--small\">\n      <a class=\"n-storylines__article-link\" href=\"https://www.ft.com/content/"
-	    + alias4(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"id","hash":{},"data":data}) : helper)))
+	  return "		<li class=\"n-storylines__article o-typography-aside__headline--small\">\n			<a class=\"n-storylines__article-link\" href=\"https://www.ft.com/content/"
+	    + alias2(alias1((depth0 != null ? depth0.id : depth0), depth0))
 	    + "\">"
-	    + alias4(((helper = (helper = helpers.title || (depth0 != null ? depth0.title : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"title","hash":{},"data":data}) : helper)))
-	    + "</a>\n		  <p class=\"o-typography-timestamp\">"
-	    + alias4(((helper = (helper = helpers.day || (depth0 != null ? depth0.day : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"day","hash":{},"data":data}) : helper)))
-	    + "</p>\n    </li>\n";
+	    + alias2(alias1((depth0 != null ? depth0.title : depth0), depth0))
+	    + "</a>\n			<p class=\"o-typography-timestamp\">"
+	    + alias2(alias1((depth0 != null ? depth0.day : depth0), depth0))
+	    + "</p>\n		</li>\n";
 	},"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
-	    var stack1, helper, alias1=depth0 != null ? depth0 : {};
+	    var stack1, alias1=depth0 != null ? depth0 : {};
 	
 	  return "<div class=\"n-storylines\">\n	<div class=\"n-storylines__info o-typography-aside__body\">\n		Explore articles of<span>\n"
 	    + ((stack1 = helpers["if"].call(alias1,((stack1 = ((stack1 = (depth0 != null ? depth0.children : depth0)) != null ? stack1["0"] : stack1)) != null ? stack1.children : stack1),{"name":"if","hash":{},"fn":container.program(1, data, 0),"inverse":container.program(3, data, 0),"data":data})) != null ? stack1 : "")
 	    + "		</span>\n	</div>\n\n	<div class=\"n-storylines__content-count o-typography-aside__body--small\">\n		"
-	    + container.escapeExpression(((helper = (helper = helpers.total || (depth0 != null ? depth0.total : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(alias1,{"name":"total","hash":{},"data":data}) : helper)))
-	    + " articles published\n	</div>\n\n		<div class=\"n-storylines__timeline-container\">\n\n"
+	    + container.escapeExpression(container.lambda((depth0 != null ? depth0.total : depth0), depth0))
+	    + " articles published\n	</div>\n\n	<div class=\"n-storylines__timeline-container\">\n\n"
 	    + ((stack1 = helpers["if"].call(alias1,((stack1 = ((stack1 = (depth0 != null ? depth0.children : depth0)) != null ? stack1["0"] : stack1)) != null ? stack1.children : stack1),{"name":"if","hash":{},"fn":container.program(5, data, 0),"inverse":container.program(10, data, 0),"data":data})) != null ? stack1 : "")
 	    + "	</div>\n	<div class=\"n-storylines__article-header o-typography-aside__body--small\">\n		Most popular articles\n	</div>\n	<ul class=\"n-storylines__top-content\">\n"
 	    + ((stack1 = helpers.each.call(alias1,(depth0 != null ? depth0.relevantArticles : depth0),{"name":"each","hash":{},"fn":container.program(18, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
-	    + "	</ul>\n</div>\n";
+	    + "	</ul>\n</div>\n<script type=\"text/javascript\">\n	 window.FT = window.FT || {};\n	 window.FT.storylineData = "
+	    + ((stack1 = __default(__webpack_require__(22)).call(alias1,depth0,{"name":"json","hash":{},"data":data})) != null ? stack1 : "")
+	    + ";\n</script>\n";
 	},"useData":true});
 
 /***/ },
@@ -1407,6 +1412,44 @@
 
 /***/ },
 /* 22 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _stringify = __webpack_require__(23);
+	
+	var _stringify2 = _interopRequireDefault(_stringify);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	module.exports = function (obj) {
+		return (0, _stringify2.default)(obj);
+	};
+
+/***/ },
+/* 23 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = { "default": __webpack_require__(24), __esModule: true };
+
+/***/ },
+/* 24 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var core = __webpack_require__(25);
+	module.exports = function stringify(it){ // eslint-disable-line no-unused-vars
+	  return (core.JSON && core.JSON.stringify || JSON.stringify).apply(JSON, arguments);
+	};
+
+/***/ },
+/* 25 */
+/***/ function(module, exports) {
+
+	var core = module.exports = {version: '1.2.6'};
+	if(typeof __e == 'number')__e = core; // eslint-disable-line no-undef
+
+/***/ },
+/* 26 */
 /***/ function(module, exports) {
 
 	const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];

@@ -8,5 +8,5 @@ fetch('./N2FkZjRhMWUtZDZjNS00ZTQ0LTg1MTMtMjYyYzBlODkzYTQ2-UE4=.json')
 		const initialData = decorate(data);
 		document.body.innerHTML = template(initialData);
 		window.FT = { storylineData: initialData };
-		main.init({ streamPageStoryLines: true });
+		main.init();
 	});

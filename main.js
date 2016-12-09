@@ -1,8 +1,8 @@
 const template = require('./templates/main.html');
 
-function init (flags) {
+function init () {
 	const initialData = window && window.FT && window.FT.storylineData;
-	if (!initialData || !flags.streamPageStoryLines) return;
+	if (!initialData) return;
 
 	const component = document.querySelector('.n-storylines');
 	const heatmapSegments = document.getElementsByClassName('n-storylines__heatmap-segment-colour');

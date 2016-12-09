@@ -2,8 +2,8 @@
 	<div class="n-storylines__info o-typography-aside__body">
 		Explore articles of<span>
 		{{#if children.0.children}}
-			{{ children.0.name  }}
-    {{else}}
+			{{children.0.name}}
+		{{else}}
 			{{name}}
 		{{/if}}
 		</span>
@@ -13,50 +13,48 @@
 		{{total}} articles published
 	</div>
 
-		<div class="n-storylines__timeline-container">
+	<div class="n-storylines__timeline-container">
 
 		{{#if children.0.children}}
-		<img class="n-storylines__back-btn" src="http://image.webservices.ft.com/v1/images/raw/fticon-v1:arrow-left?source=o-icons"/>
+			<img class="n-storylines__back-btn" src="https://www.ft.com/__origami/service/image/v2/images/raw/fticon-v1:arrow-left?source=o-icons"/>
 
 			{{#each children}}
-				<div class="n-storylines__heatmap-segment">
+			<div class="n-storylines__heatmap-segment">
 
-					<ul class="dot-container">
-						{{#if dot}}
-						{{#each dot}}
-						<li class='dot' style='margin-left: {{position}}%'>{{name}}</li>
-						{{/each}}
-						{{/if}}
-					</ul>
+				<ul class="dot-container">
+				{{#if dot}}
+					{{#each dot}}
+					<li class='dot' style='margin-left: {{position}}%'>{{name}}</li>
+					{{/each}}
+				{{/if}}
+				</ul>
 
-					<div class="n-storylines__heatmap-segment-colour" style="opacity: {{weight}};"></div>
-					<p class="n-storylines__heatmap-segment-name o-typography-aside__body--small">{{ name}}</p>
-				</div>
+				<div class="n-storylines__heatmap-segment-colour" style="opacity: {{weight}};"></div>
+				<p class="n-storylines__heatmap-segment-name o-typography-aside__body--small">{{ name}}</p>
+			</div>
 			{{/each}}
 		{{else if children}}
+			<div class="n-storylines__scroll">
+			<img class="n-storylines__back-btn" src="https://www.ft.com/__origami/service/image/v2/images/raw/fticon-v1:arrow-left?source=o-icons"/>
 
-		<div class="n-storylines__scroll">
-			<img class="n-storylines__back-btn" src="http://image.webservices.ft.com/v1/images/raw/fticon-v1:arrow-left?source=o-icons"/>
-
-		{{#each children}}
+			{{#each children}}
 			<div class="n-storylines__heatmap-segment n-storylines__heatmap-segment--all-months ">
 				<ul class="dot-container">
 					{{#if dot}}
-					{{#each dot}}
-					<li class='dot' style="margin-left: {{position}}%">{{name}}</li>
-					{{/each}}
+						{{#each dot}}
+						<li class='dot' style="margin-left: {{position}}%">{{name}}</li>
+						{{/each}}
 					{{/if}}
 				</ul>
-						<div class="n-storylines__heatmap-segment-colour n-storylines__all-months" style="opacity: {{weight}};"></div>
-						<p class="n-storylines__heatmap-segment-name o-typography-aside__body--small">{{ name}}</p>
+				<div class="n-storylines__heatmap-segment-colour n-storylines__all-months" style="opacity: {{weight}};"></div>
+				<p class="n-storylines__heatmap-segment-name o-typography-aside__body--small">{{ name}}</p>
 			</div>
-		{{/each}}
+			{{/each}}
 		</div>
 		{{else}}
-		<img class="n-storylines__back-btn" src="http://image.webservices.ft.com/v1/images/raw/fticon-v1:arrow-left?source=o-icons"/>
+			<img class="n-storylines__back-btn" src="https://www.ft.com/__origami/service/image/v2/images/raw/fticon-v1:arrow-left?source=o-icons"/>
 			<div class="n-storylines__heatmap-segment">
 				<div class="n-storylines__heatmap-segment-colour" style="opacity: {{weight}};"></div>
-
 				<p class="n-storylines__heatmap-segment-name o-typography-aside__body--small">{{name}}</p>
 			</div>
 		{{/if}}
@@ -67,9 +65,13 @@
 	<ul class="n-storylines__top-content">
 		{{#each relevantArticles}}
 		<li class="n-storylines__article o-typography-aside__headline--small">
-      <a class="n-storylines__article-link" href="https://www.ft.com/content/{{id}}">{{title}}</a>
-		  <p class="o-typography-timestamp">{{day}}</p>
-    </li>
+			<a class="n-storylines__article-link" href="https://www.ft.com/content/{{id}}">{{title}}</a>
+			<p class="o-typography-timestamp">{{day}}</p>
+		</li>
 		{{/each}}
 	</ul>
 </div>
+<script type="text/javascript">
+	 window.FT = window.FT || {};
+	 window.FT.storylineData = {{{json this}}};
+</script>

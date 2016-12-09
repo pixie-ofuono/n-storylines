@@ -1,0 +1,43 @@
+.n-storylines__timeline-container {
+  display: flex;
+  position: relative;
+  width: 100%;
+	margin-bottom: 20px;
+  background: $background;
+}
+
+.n-storylines__timeline-container:before {
+  border-top: 1px solid $border;
+  content: "";
+  margin: 0 auto;
+  position: absolute;
+  top: 35px;
+  left: -30%;
+  width: 150%;
+  z-index: -1;
+}
+
+.n-storylines__back-btn {
+	background: $background;
+	border: none;
+}
+
+.parent-level {
+	@include oTypographySansBold(s);
+	color: $buttonColor;
+	display: inline;
+}
+
+.o-icons-icon {
+	@include oIconsGetIcon('arrow-left', $buttonColor, 32);
+}
+
+
+.n-storylines__scroll {
+  overflow-x: auto;
+  white-space: nowrap;
+  display: flex;
+  position: relative;
+  background: $background;
+	width: 100%;
+}

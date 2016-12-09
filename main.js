@@ -27,8 +27,9 @@ function init () {
 		}
 	}
 
-	function renderStoryline (data) {
-		component.innerHTML = template(data);
+	function renderStoryline(data) {
+		const component = document.querySelector('.n-storylines');
+		component.parentNode.innerHTML = template(data);
 		setupInteraction(data);
 	}
 

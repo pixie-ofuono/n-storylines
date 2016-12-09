@@ -1,76 +1,46 @@
 <div class="n-storylines">
-	<div class="n-storylines__info o-typography-aside__body">
-		Explore articles of<span>
+	<div class="n-storylines__info">
+		Explore articles of
 		{{#if children.0.children}}
 			{{children.0.name}}
 		{{else}}
 			{{name}}
 		{{/if}}
-		</span>
 	</div>
 
-	<div class="n-storylines__content-count o-typography-aside__body--small">
+	<div class="n-storylines__content-count">
 		{{total}} articles published
 	</div>
 
 	<div class="n-storylines__timeline-container">
-
+		<button class="n-storylines__back-btn"><i class="o-icons-icon o-icons-icon--arrow-left"></i>
 		{{#if children.0.children}}
-			<img class="n-storylines__back-btn" src="https://www.ft.com/__origami/service/image/v2/images/raw/fticon-v1:arrow-left?source=o-icons"/>
-
-			{{#each children}}
-			<div class="n-storylines__heatmap-segment">
-
-				<ul class="dot-container">
-				{{#if dot}}
-					{{#each dot}}
-					<li class='dot' style='margin-left: {{position}}%'>{{name}}</li>
-					{{/each}}
-				{{/if}}
-				</ul>
-
-				<div class="n-storylines__heatmap-segment-colour" style="opacity: {{weight}};"></div>
-				<p class="n-storylines__heatmap-segment-name o-typography-aside__body--small">{{ name}}</p>
-			</div>
-			{{/each}}
+			</button>
+			{{> partials/years}}
 		{{else if children}}
-			<div class="n-storylines__scroll">
-			<img class="n-storylines__back-btn" src="https://www.ft.com/__origami/service/image/v2/images/raw/fticon-v1:arrow-left?source=o-icons"/>
-
-			{{#each children}}
-			<div class="n-storylines__heatmap-segment n-storylines__heatmap-segment--all-months ">
-				<ul class="dot-container">
-					{{#if dot}}
-						{{#each dot}}
-						<li class='dot' style="margin-left: {{position}}%">{{name}}</li>
-						{{/each}}
-					{{/if}}
-				</ul>
-				<div class="n-storylines__heatmap-segment-colour n-storylines__all-months" style="opacity: {{weight}};"></div>
-				<p class="n-storylines__heatmap-segment-name o-typography-aside__body--small">{{ name}}</p>
-			</div>
-			{{/each}}
-		</div>
+			<div class="parent-level">Years</div></button>
+			{{> partials/months}}
 		{{else}}
-			<img class="n-storylines__back-btn" src="https://www.ft.com/__origami/service/image/v2/images/raw/fticon-v1:arrow-left?source=o-icons"/>
-			<div class="n-storylines__heatmap-segment">
-				<div class="n-storylines__heatmap-segment-colour" style="opacity: {{weight}};"></div>
-				<p class="n-storylines__heatmap-segment-name o-typography-aside__body--small">{{name}}</p>
-			</div>
+		<div class="parent-level">Months</div></button>
+			{{> partials/single-month}}
 		{{/if}}
+		</div>
+
+	<div class="n-storylines__article-header">
+		Key articles
 	</div>
-	<div class="n-storylines__article-header o-typography-aside__body--small">
-		Most popular articles
-	</div>
+
 	<ul class="n-storylines__top-content">
 		{{#each relevantArticles}}
-		<li class="n-storylines__article o-typography-aside__headline--small">
+		<li class="n-storylines__article">
 			<a class="n-storylines__article-link" href="https://www.ft.com/content/{{id}}">{{title}}</a>
-			<p class="o-typography-timestamp">{{day}}</p>
+			<p class="n-storyline-timestamp">{{day}} {{month}} {{year}}</p>
 		</li>
 		{{/each}}
 	</ul>
+
 </div>
+
 <script type="text/javascript">
 	 window.FT = window.FT || {};
 	 window.FT.storylineData = {{{json this}}};

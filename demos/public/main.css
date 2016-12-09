@@ -2598,7 +2598,7 @@ html:after {
   z-index: -1;
 }.parent-level {
   padding: 26px 8px 0 0;
-  font-family: MetricSemibold;
+  font-family: oTypographySansBold(s);
   color: #26747a;
 }.n-storylines__back-btn {
   margin-top: 19px;
@@ -2659,7 +2659,7 @@ html:after {
   margin-right: 20px;
 }.dot {
   position: absolute;
-  background: black;
+  background: #1d1d1d;
   top: -10px;
   height: 10px;
   width: 10px;
@@ -2667,7 +2667,7 @@ html:after {
   text-align: center;
   font-size: 10px;
   line-height: 10px;
-  color: white;
+  color: #ffe9d7;
   padding: 5px;
   z-index: 3;
   margin-right: -4%;
@@ -2680,11 +2680,10 @@ html:after {
   border-top: 8px solid #000000;
   border-bottom: 1px solid #cec6b9;
 }.n-storylines__info {
+  font-family: oTypographySans(m);
   margin: 8px 0;
 }.n-storylines__content-count {
   float: left;
   margin-bottom: 10px;
-}span {
-  font-weight: 600;
 }
 /*# sourceMappingURL=main.css.map*/

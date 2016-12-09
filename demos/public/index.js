@@ -46,12 +46,15 @@
 
 	const main = __webpack_require__(1);
 	const template = __webpack_require__(2);
+	const decorate = __webpack_require__(29);
 	
 	fetch('./N2FkZjRhMWUtZDZjNS00ZTQ0LTg1MTMtMjYyYzBlODkzYTQ2-UE4=.json')
 		.then(res => res.json())
 		.then(data => {
-			document.body.innerHTML = template(data);
-			main.init(data);
+			const initialData = decorate(data);
+			document.body.innerHTML = template(initialData);
+			window.FT = { storylineData: initialData };
+			main.init();
 		});
 
 
@@ -60,16 +63,16 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	const template = __webpack_require__(2);
-	const yearDots = __webpack_require__(25);
 	
-	function init(initialData) {
+	function init () {
+		const initialData = window.FT.storylineData;
+		const component = document.querySelector('.n-storylines');
 		const heatmapSegments = document.getElementsByClassName('n-storylines__heatmap-segment-colour');
 		const backBtns = document.getElementsByClassName('n-storylines__back-btn');
-		const dotData = yearDots(initialData);
 	
-		setupInteraction(dotData);
+		setupInteraction(initialData);
 	
-		function setupInteraction(data) {
+		function setupInteraction (data) {
 			backBtns[0].style.display = data === initialData ? 'none' : '';
 			if (!data.children) return;
 	
@@ -92,16 +95,17 @@
 			setupInteraction(data);
 		}
 	
-		function setupBackBtn(data) {
+		function setupBackBtn (data) {
 			backBtns[0].addEventListener('click', () => {
 				renderStoryline(data);
-				setupBackBtn(dotData);
+				setupBackBtn(initialData);
 			});
 		}
 	}
 	
 	module.exports = {
-		init
+		init,
+		decorate: __webpack_require__(29)
 	};
 
 
@@ -141,25 +145,27 @@
 	},"12":function(container,depth0,helpers,partials,data) {
 	    var alias1=container.lambda, alias2=container.escapeExpression;
 	
-	  return "		<li class=\"n-storylines__article o-typography-aside__headline--small\">\n      <a class=\"n-storylines__article-link\" href=\"https://www.ft.com/content/"
+	  return "		<li class=\"n-storylines__article o-typography-aside__headline--small\">\n			<a class=\"n-storylines__article-link\" href=\"https://www.ft.com/content/"
 	    + alias2(alias1((depth0 != null ? depth0.id : depth0), depth0))
 	    + "\">"
 	    + alias2(alias1((depth0 != null ? depth0.title : depth0), depth0))
-	    + "</a>\n		  <p class=\"o-typography-timestamp\">"
+	    + "</a>\n			<p class=\"o-typography-timestamp\">"
 	    + alias2(alias1((depth0 != null ? depth0.day : depth0), depth0))
-	    + "</p>\n    </li>\n";
+	    + "</p>\n		</li>\n";
 	},"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
 	    var stack1, alias1=depth0 != null ? depth0 : {};
 	
-	  return "<div class=\"n-storylines\">\n	<div class=\"n-storylines__info o-typography-aside__body\">\n		Explore articles of<span>\n"
+	  return "<div class=\"n-storylines\">\n	<div class=\"n-storylines__info\">\n		Explore articles of\n"
 	    + ((stack1 = helpers["if"].call(alias1,((stack1 = ((stack1 = (depth0 != null ? depth0.children : depth0)) != null ? stack1["0"] : stack1)) != null ? stack1.children : stack1),{"name":"if","hash":{},"fn":container.program(1, data, 0),"inverse":container.program(3, data, 0),"data":data})) != null ? stack1 : "")
-	    + "		</span>\n	</div>\n\n	<div class=\"n-storylines__content-count o-typography-aside__body--small\">\n		"
+	    + "	</div>\n\n	<div class=\"n-storylines__content-count o-typography-aside__body--small\">\n		"
 	    + container.escapeExpression(container.lambda((depth0 != null ? depth0.total : depth0), depth0))
 	    + " articles published\n	</div>\n\n	<div class=\"n-storylines__timeline-container\">\n		<i class=\"n-storylines__back-btn o-icons-icon o-icons-icon--arrow-left\"></i>\n\n"
 	    + ((stack1 = helpers["if"].call(alias1,((stack1 = ((stack1 = (depth0 != null ? depth0.children : depth0)) != null ? stack1["0"] : stack1)) != null ? stack1.children : stack1),{"name":"if","hash":{},"fn":container.program(5, data, 0),"inverse":container.program(7, data, 0),"data":data})) != null ? stack1 : "")
 	    + "		</div>\n\n	<div class=\"n-storylines__article-header o-typography-aside__body--small\">\n		Key articles\n	</div>\n\n	<ul class=\"n-storylines__top-content\">\n"
 	    + ((stack1 = helpers.each.call(alias1,(depth0 != null ? depth0.relevantArticles : depth0),{"name":"each","hash":{},"fn":container.program(12, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
-	    + "	</ul>\n\n</div>\n";
+	    + "	</ul>\n\n</div>\n\n<script type=\"text/javascript\">\n	 window.FT = window.FT || {};\n	 window.FT.storylineData = "
+	    + ((stack1 = __default(__webpack_require__(25)).call(alias1,depth0,{"name":"json","hash":{},"data":data})) != null ? stack1 : "")
+	    + ";\n</script>\n";
 	},"usePartial":true,"useData":true});
 
 /***/ },
@@ -1441,6 +1447,44 @@
 
 /***/ },
 /* 25 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _stringify = __webpack_require__(26);
+	
+	var _stringify2 = _interopRequireDefault(_stringify);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	module.exports = function (obj) {
+		return (0, _stringify2.default)(obj);
+	};
+
+/***/ },
+/* 26 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = { "default": __webpack_require__(27), __esModule: true };
+
+/***/ },
+/* 27 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var core = __webpack_require__(28);
+	module.exports = function stringify(it){ // eslint-disable-line no-unused-vars
+	  return (core.JSON && core.JSON.stringify || JSON.stringify).apply(JSON, arguments);
+	};
+
+/***/ },
+/* 28 */
+/***/ function(module, exports) {
+
+	var core = module.exports = {version: '1.2.6'};
+	if(typeof __e == 'number')__e = core; // eslint-disable-line no-undef
+
+/***/ },
+/* 29 */
 /***/ function(module, exports) {
 
 	const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];

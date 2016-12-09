@@ -13,12 +13,17 @@
 	</div>
 
 	<div class="n-storylines__timeline-container">
-		<i class="n-storylines__back-btn o-icons-icon o-icons-icon--arrow-left"></i>
+		<button class="n-storylines__back-btn"><i class="o-icons-icon o-icons-icon--arrow-left"></i>
 		{{#if children.0.children}}
+			</button>
 			{{> partials/years}}
 		{{else if children}}
+			<div class="parent-level">Years</div>
+		</button>
 			{{> partials/months}}
 		{{else}}
+		<div class="parent-level">Months</div>
+		</button>
 			{{> partials/single-month}}
 		{{/if}}
 		</div>

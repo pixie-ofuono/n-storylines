@@ -7,17 +7,17 @@
 }
 
 .dot {
-	@include oTypographySansData(xs)
   position: absolute;
-  background: oColorsGetPaletteColor('warm-4');
+  background: $filler;
   top: -10px;
   height: 10px;
   width: 10px;
   border-radius: 100%;
   text-align: center;
+	@include oTypographySansData(xs)
   font-size: 10px;
   line-height: 10px;
-  color: oColorsGetPaletteColor('warm-1');
+  color: $background;
   padding: 5px;
   z-index: 3;
   margin-right: -4%;

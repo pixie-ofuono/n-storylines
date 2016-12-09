@@ -3094,7 +3094,7 @@
   content: counter(list);
   position: absolute;
   font: 14px/15px MetricWeb, sans-serif;
-  color: #fff1e0;
+  color: #ffe9d7;
   left: -35px;
   top: 2px;
   text-align: center;
@@ -3128,7 +3128,7 @@
   line-height: 24px;
   font-size: 20px;
   font-weight: 400;
-  color: #505050;
+  color: #1d1d1d;
   text-decoration: none;
 }.n-storylines__article-link:focus {
   cursor: pointer;
@@ -3226,10 +3226,6 @@
   position: relative;
   margin-right: 20px;
 }.dot {
-  font-family: MetricWeb, sans-serif;
-  line-height: 13px;
-  font-size: 11px;
-  font-weight: 400;
   position: absolute;
   background: #1d1d1d;
   top: -10px;
@@ -3237,6 +3233,10 @@
   width: 10px;
   border-radius: 100%;
   text-align: center;
+  font-family: MetricWeb, sans-serif;
+  line-height: 13px;
+  font-size: 11px;
+  font-weight: 400;
   font-size: 10px;
   line-height: 10px;
   color: #ffe9d7;

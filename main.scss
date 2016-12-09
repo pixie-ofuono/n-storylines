@@ -5,22 +5,22 @@ $o-typography-is-silent: false;
 @import 'o-grid/main';
 @import 'o-colors/main';
 @import 'o-icons/main';
+@import 'styles/_variables';
 
 @import 'styles/article-list';
 @import 'styles/timeline-container';
 @import 'styles/heatmap';
 @import 'styles/dots';
 
-
 body {
   width: 85%;
-  background: oColorsGetPaletteColor('warm-1');
+  background: $background;
   margin: 0 auto;
 }
 
 .n-storylines {
   border-top: 8px solid oColorsGetPaletteColor('black');
-  border-bottom: 1px solid oColorsGetPaletteColor('pink-tint3');
+  border-bottom: 1px solid $border;
 }
 
 .n-storylines__info {

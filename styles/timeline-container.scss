@@ -3,11 +3,11 @@
   position: relative;
   width: 100%;
 	margin-bottom: 20px;
-  background: oColorsGetPaletteColor('warm-1');
+  background: $background;
 }
 
 .n-storylines__timeline-container:before {
-  border-top: 1px solid oColorsGetPaletteColor('pink-tint3');
+  border-top: 1px solid $border;
   content: "";
   margin: 0 auto;
   position: absolute;
@@ -20,12 +20,12 @@
 .parent-level {
 	padding: 26px 8px 0 0;
 	@include oTypographySansBold(s);
-	color: oColorsGetPaletteColor('teal-1');
+	color: $buttonColor;
 }
 
 .n-storylines__back-btn {
 	margin: 17px -5px 0 -5px;
-	@include oIconsGetIcon('arrow-left', oColorsGetPaletteColor('teal-1'), 36);
+	@include oIconsGetIcon('arrow-left', $buttonColor, 36);
 }
 
 .n-storylines__scroll {
@@ -33,6 +33,6 @@
   white-space: nowrap;
   display: flex;
   position: relative;
-  background:  oColorsGetPaletteColor('warm-1');
+  background: $background;
 	width: 100%;
 }

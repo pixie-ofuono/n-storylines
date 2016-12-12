@@ -12,15 +12,21 @@ $o-typography-is-silent: false;
 @import 'styles/heatmap';
 @import 'styles/dots';
 
-body {
-  width: 85%;
-  background: $background;
-  margin: 0 auto;
+
+.n-storylines__outer {
+	width: 100%;
+	position: relative;
+	left: 0;
+	top: 25px;
+	background: $background;
+	z-index: -2;
 }
 
-.n-storylines {
-  border-top: 8px solid oColorsGetPaletteColor('black');
+.n-storylines__inner {
+	border-top: 8px solid oColorsGetPaletteColor('black');
   border-bottom: 1px solid $border;
+	margin: 0 auto;
+	width: 90%;
 }
 
 .n-storylines__info {
@@ -32,5 +38,7 @@ body {
 	@include oTypographySansData(m)
 	color: rgba(0, 0, 0, 0.6);
   float: left;
-  margin-bottom: 20px;
+	@include oGridRespondTo($until: S){
+		margin-bottom: 20px;
+	}
 }

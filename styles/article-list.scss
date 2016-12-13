@@ -68,10 +68,6 @@
 	}
 }
 
-p {
-	margin: 0;
-}
-
 .n-storyline-timestamp {
 	@include oTypographySansData(m);
 	color: $opaque;
@@ -81,6 +77,7 @@ p {
 	@include oTypographySerifDisplay(m);
   color: $filler;
 	text-decoration: none;
+	border-bottom: none;
 }
 
 .n-storylines__article-link:focus {

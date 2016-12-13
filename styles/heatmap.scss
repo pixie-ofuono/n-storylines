@@ -4,12 +4,22 @@
   text-align: center;
 }
 
-.n-storylines__heatmap-segment-colour,
-.n-storylines__heatmap-segment-none {
+.n-storylines__heatmap-segment-colour {
   background: oColorsGetPaletteColor('claret');
   width: 100%;
   height: 50px;
   display: flex;
+}
+
+.n-storylines__heatmap-segment-none {
+	background: none;
+	width: 100%;
+	height: 50px;
+	display: flex;
+}
+
+.n-storylines__heatmap-segment-colour--background {
+ background: $background;
 }
 
 .n-storylines__heatmap-segment-name {
@@ -30,10 +40,6 @@
   border-radius: 100%;
   height: 9px;
   width: 9px;
-}
-
-a:hover {
-	background: pink;
 }
 
 .no-articles {

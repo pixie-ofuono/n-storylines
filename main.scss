@@ -12,10 +12,15 @@ $o-typography-is-silent: false;
 @import 'styles/heatmap';
 @import 'styles/dots';
 
+.n-storylines__container {
+	margin-top: 25px;
+	margin-left: 2%;
+}
+
 .n-storylines {
 	border-top: 8px solid oColorsGetPaletteColor('black');
   border-bottom: 1px solid $border;
-	margin: 25px auto 0 auto;
+	margin: 0 auto;
 	width: 90%;
 }
 

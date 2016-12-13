@@ -24,21 +24,20 @@
 		<div class="parent-level">Months</div></button>
 			{{> n-storylines/templates/partials/single-month}}
 		{{/if}}
-		</div>
+	</div>
 
 	<div class="n-storylines__article-header">
 		Key articles
 	</div>
 
-	<ul class="n-storylines__top-content">
+	<ul class="n-storylines__top-content o-grid-row">
 		{{#each relevantArticles}}
-		<li class="n-storylines__article">
+		<li class="n-storylines__article"  data-o-grid-colspan="12 M4 L2">
 			<a class="n-storylines__article-link" href="https://www.ft.com/content/{{id}}">{{title}}</a>
 			<p class="n-storyline-timestamp">{{timestamp}}</p>
 		</li>
 		{{/each}}
 	</ul>
-
 </div>
 
 <script type="text/javascript">

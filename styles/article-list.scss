@@ -1,5 +1,8 @@
 .n-storylines__article {
   position:relative;
+	@include oGridRespondTo(M, $until: L) {
+		margin-bottom: 40px;
+	}
 	margin-bottom: 20px;
 }
 
@@ -9,8 +12,16 @@
   position: absolute;
   font: 14px/15px MetricWeb, sans-serif;
   color: $background;
-  left: -35px;
-  top: 2px;
+	@include oGridRespondTo(M) {
+		left: 15px;
+		top: -30px;
+	}
+
+	@include oGridRespondTo($until: M) {
+		left: -35px;
+		top: 2px;
+	}
+
   text-align: center;
   background-color: $filler;
   border-radius: 100%;
@@ -21,18 +32,40 @@
 
 .n-storylines__top-content {
   counter-reset: list;
-  width: 85%;
-  position: relative;
+	position: relative;
+	width: 85%;
+	margin: 0 auto;
+
+	@include oGridRespondTo(M) {
+		margin: 0;
+		width: 100%;
+		margin-top: 20px;
+		padding: 0;
+	}
 }
 
 .n-storylines__top-content::before {
   content: '';
   position: absolute;
-  border-left: 1px solid $border;
-  top: 5px;
-  bottom: 35px;
-  left: 17px;
-  margin: 0;
+	@include oGridRespondTo(M) {
+		border-top: 1px solid $border;
+		top: -18px;
+		left: -30%;
+		width: 150%;
+	}
+
+	@include oGridRespondTo(M, $until:L) {
+		border-bottom: 1px solid $border;
+		height: 50%;
+	}
+
+	@include oGridRespondTo($until: M) {
+		border-left: 1px solid $border;
+		top: 5px;
+		bottom: 35px;
+		left: 17px;
+		margin: 0 auto;
+	}
 }
 
 p {
@@ -58,4 +91,5 @@ p {
 .n-storylines__article-header {
 	@include oTypographySansData(m);
 	color: $opaque;
+	margin-bottom: 40px;
 }

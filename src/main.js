@@ -1,4 +1,4 @@
-const template = require('./templates/main.html');
+const template = require('../templates/main.html');
 
 function init () {
 	const initialData = window && window.FT && window.FT.storylineData;
@@ -43,5 +43,5 @@ function init () {
 
 module.exports = {
 	init,
-	decorate: require('./lib/dotPosition')
+	decorate: require('./lib/decorate')
 };

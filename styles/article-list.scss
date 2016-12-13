@@ -1,68 +1,71 @@
-.n-storylines__article {
-  position:relative;
-	@include oGridRespondTo(M, $until: L) {
-		margin-bottom: 40px;
+.n-storylines__article-header {
+	color: $opaque;
+	@include oTypographySansData(m);
+	@include oGridRespondTo($until: M) {
+		margin-bottom: 10px;
 	}
+}
+
+.n-storylines__article {
 	margin-bottom: 20px;
 }
 
 .n-storylines__article::before {
   counter-increment: list;
   content: counter(list);
-  position: absolute;
   font: 14px/15px MetricWeb, sans-serif;
   color: $background;
-	@include oGridRespondTo(M) {
-		left: 15px;
-		top: -30px;
-	}
-
-	@include oGridRespondTo($until: M) {
-		left: -35px;
-		top: 2px;
-	}
-
-  text-align: center;
+	text-align: center;
   background-color: $filler;
   border-radius: 100%;
   height: 15px;
   width: 15px;
   padding: 5px;
+
+	@include oGridRespondTo($until: M) {
+		position: absolute;
+		left: -35px;
+		top: 2px;
+	};
+
+	@include oGridRespondTo(M) {
+		display: block;
+		margin-bottom: 5px;
+	}
+}
+
+.n-storylines__article:nth-of-type(3n+1):after {
+	@include oGridRespondTo(M) {
+		content: '';
+		display: block;
+		position: absolute;
+		z-index: -1;
+		border-top: 1px solid $border;
+		top: 13px;
+		left: -50%;
+		width: 500%;
+	}
 }
 
 .n-storylines__top-content {
-  counter-reset: list;
+	counter-reset: list;
 	position: relative;
-	width: 85%;
 	margin: 0 auto;
 
 	@include oGridRespondTo(M) {
-		margin: 0;
+		margin: 10px 0 0 -13px;
 		width: 100%;
-		margin-top: 20px;
 		padding: 0;
 	}
 }
 
 .n-storylines__top-content::before {
-  content: '';
-  position: absolute;
-	@include oGridRespondTo(M) {
-		border-top: 1px solid $border;
-		top: -18px;
-		left: -30%;
-		width: 150%;
-	}
-
-	@include oGridRespondTo(M, $until:L) {
-		border-bottom: 1px solid $border;
-		height: 50%;
-	}
-
 	@include oGridRespondTo($until: M) {
+  	content: '';
+  	position: absolute;
 		border-left: 1px solid $border;
 		top: 5px;
-		bottom: 35px;
+		bottom: 56px;
 		left: 17px;
 		margin: 0 auto;
 	}
@@ -71,6 +74,7 @@
 .n-storyline-timestamp {
 	@include oTypographySansData(m);
 	color: $opaque;
+	margin: 0;
 }
 
 .n-storylines__article-link {
@@ -83,10 +87,4 @@
 .n-storylines__article-link:focus {
   cursor: pointer;
   color: oColorsGetPaletteColor('grey-tint3');
-}
-
-.n-storylines__article-header {
-	@include oTypographySansData(m);
-	color: $opaque;
-	margin-bottom: 40px;
 }

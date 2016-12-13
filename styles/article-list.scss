@@ -1,5 +1,8 @@
 .n-storylines__article {
   position:relative;
+	@include oGridRespondTo(M, $until: L) {
+		margin-bottom: 40px;
+	}
 	margin-bottom: 20px;
 }
 
@@ -50,6 +53,12 @@
 		left: -30%;
 		width: 150%;
 	}
+
+	@include oGridRespondTo(M, $until:L) {
+		border-bottom: 1px solid $border;
+		height: 50%;
+	}
+
 	@include oGridRespondTo($until: M) {
 		border-left: 1px solid $border;
 		top: 5px;

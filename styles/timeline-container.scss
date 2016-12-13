@@ -3,7 +3,7 @@
   position: relative;
   width: 100%;
 	margin-bottom: 20px;
-  background: $background;
+	background: inherit;
 }
 
 .n-storylines__timeline-container:before {
@@ -18,8 +18,10 @@
 }
 
 .n-storylines__back-btn {
-	background: $background;
 	border: none;
+	background: none;
+	height: 50px;
+  margin-top: 21px;
 }
 
 .parent-level {
@@ -28,16 +30,15 @@
 	display: inline;
 }
 
-.o-icons-icon {
-	@include oIconsGetIcon('arrow-left', $buttonColor, 32);
+.n-storylines__icon  {
+	@include oIconsGetIcon('arrow-left', $buttonColor, 20);
 }
-
 
 .n-storylines__scroll {
   overflow-x: auto;
   white-space: nowrap;
   display: flex;
   position: relative;
-  background: $background;
 	width: 100%;
+	background: inherit;
 }

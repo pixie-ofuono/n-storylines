@@ -19,7 +19,7 @@ function init () {
 					console.log(data);
 					renderStoryline(data.children[i]);
 					setupBackBtn(data);
-				}, true);
+				});
 			} else {
 				let heatmapSegmentsNames = document.querySelectorAll('.n-storylines__heatmap-segment-name');
 				heatmapSegmentsNames[i].classList.add('no-articles');

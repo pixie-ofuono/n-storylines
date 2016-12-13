@@ -19,14 +19,14 @@
 }
 
 .n-storylines__heatmap-segment-colour--background {
- background: $background;
+	background: $background;
 }
 
 .n-storylines__heatmap-segment-name {
 	@include oTypographySans(s);
 	color: $opaque;
   position: relative;
-  margin-top:10px;
+  margin: 10px 0 5px;
 }
 
 .n-storylines__heatmap-segment-name::before {

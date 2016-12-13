@@ -30,10 +30,10 @@ $o-typography-is-silent: false;
 }
 
 .n-storylines__content-count {
-	@include oTypographySansData(m)
 	color: rgba(0, 0, 0, 0.6);
-  float: left;
-	@include oGridRespondTo($until: S){
-		margin-bottom: 20px;
+	float: left;
+	@include oTypographySansData(m)
+	@include oGridRespondTo($until: M){
+		margin-bottom: 10px;
 	}
 }

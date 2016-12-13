@@ -12,20 +12,10 @@ $o-typography-is-silent: false;
 @import 'styles/heatmap';
 @import 'styles/dots';
 
-
-.n-storylines__outer {
-	width: 100%;
-	position: relative;
-	left: 0;
-	top: 25px;
-	background: $background;
-	z-index: -2;
-}
-
-.n-storylines__inner {
+.n-storylines {
 	border-top: 8px solid oColorsGetPaletteColor('black');
   border-bottom: 1px solid $border;
-	margin: 0 auto;
+	margin: 25px auto 0 auto;
 	width: 90%;
 }
 

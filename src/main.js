@@ -4,7 +4,6 @@ function init () {
 	const initialData = window && window.FT && window.FT.storylineData;
 	if (!initialData) return;
 
-	const component = document.querySelector('.n-storylines');
 	const heatmapSegments = document.getElementsByClassName('n-storylines__heatmap-segment-colour');
 	const backBtns = document.getElementsByClassName('n-storylines__back-btn');
 
@@ -17,9 +16,10 @@ function init () {
 		for (let i = 0; i < heatmapSegments.length; i++) {
 			if (data.children[i].relevantArticles.length > 0) {
 				heatmapSegments[i].addEventListener('click', () => {
+					console.log(data);
 					renderStoryline(data.children[i]);
 					setupBackBtn(data);
-				});
+				}, true);
 			} else {
 				let heatmapSegmentsNames = document.querySelectorAll('.n-storylines__heatmap-segment-name');
 				heatmapSegmentsNames[i].classList.add('no-articles');
@@ -28,7 +28,7 @@ function init () {
 	}
 
 	function renderStoryline(data) {
-		const component = document.querySelector('.n-storylines__inner');
+		const component = document.querySelector('.n-storylines');
 		component.parentNode.innerHTML = template(data);
 		setupInteraction(data);
 	}

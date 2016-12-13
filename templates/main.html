@@ -1,47 +1,43 @@
-<div class="n-storylines__outer n-util-clearfix">
-	<div class="n-storylines__inner">
-
-		<div class="n-storylines__info">
-			Explore articles of
-			{{#if children.0.children}}
-				{{children.0.name}}
-			{{else}}
-				{{name}}
-			{{/if}}
-		</div>
-
-		<div class="n-storylines__content-count">
-			{{total}} articles published
-		</div>
-
-		<div class="n-storylines__timeline-container">
-			<button class="n-storylines__back-btn"><i class="o-icons-icon o-icons-icon--arrow-left"></i>
-			{{#if children.0.children}}
-				</button>
-				{{> n-storylines/templates/partials/years}}
-			{{else if children}}
-				<div class="parent-level">Years</div></button>
-				{{> n-storylines/templates/partials/months}}
-			{{else}}
-			<div class="parent-level">Months</div></button>
-				{{> n-storylines/templates/partials/single-month}}
-			{{/if}}
-		</div>
-
-		<div class="n-storylines__article-header">
-			Key articles
-		</div>
-
-		<ul class="n-storylines__top-content o-grid-row">
-			{{#each relevantArticles}}
-			<li class="n-storylines__article"  data-o-grid-colspan="12 M4 L2">
-				<a class="n-storylines__article-link" href="https://www.ft.com/content/{{id}}">{{title}}</a>
-				<p class="n-storyline-timestamp">{{timestamp}}</p>
-			</li>
-			{{/each}}
-		</ul>
-
+<div class="n-storylines">
+	<div class="n-storylines__info">
+		Explore articles of
+		{{#if children.0.children}}
+			{{children.0.name}}
+		{{else}}
+			{{name}}
+		{{/if}}
 	</div>
+
+	<div class="n-storylines__content-count">
+		{{total}} articles published
+	</div>
+
+	<div class="n-storylines__timeline-container">
+		<button class="n-storylines__back-btn"><i class="o-icons-icon o-icons-icon--arrow-left"></i>
+		{{#if children.0.children}}
+			</button>
+			{{> n-storylines/templates/partials/years}}
+		{{else if children}}
+			<div class="parent-level">Years</div></button>
+			{{> n-storylines/templates/partials/months}}
+		{{else}}
+		<div class="parent-level">Months</div></button>
+			{{> n-storylines/templates/partials/single-month}}
+		{{/if}}
+	</div>
+
+	<div class="n-storylines__article-header">
+		Key articles
+	</div>
+
+	<ul class="n-storylines__top-content o-grid-row">
+		{{#each relevantArticles}}
+		<li class="n-storylines__article"  data-o-grid-colspan="12 M4 L2">
+			<a class="n-storylines__article-link" href="https://www.ft.com/content/{{id}}">{{title}}</a>
+			<p class="n-storyline-timestamp">{{timestamp}}</p>
+		</li>
+		{{/each}}
+	</ul>
 </div>
 
 <script type="text/javascript">

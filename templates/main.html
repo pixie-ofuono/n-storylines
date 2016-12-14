@@ -1,8 +1,8 @@
 <div class="n-storylines">
 	<div class="n-storylines__info">
-		Explore articles of
+		Explore articles from
 		{{#if children.0.children}}
-			{{children.0.name}}
+			{{children.0.name}}–Present
 		{{else}}
 			{{name}}
 		{{/if}}
@@ -10,10 +10,11 @@
 
 	<div class="n-storylines__content-count">
 		{{total}} articles published
+		<button class="n-storylines__back-btn"><i class="n-storylines__icon o-icons-icon o-icons-icon--arrow-left"></i>
+
 	</div>
 
 	<div class="n-storylines__timeline-container">
-		<button class="n-storylines__back-btn"><i class="n-storylines__icon o-icons-icon o-icons-icon--arrow-left"></i>
 		{{#if children.0.children}}
 			</button>
 			{{> n-storylines/templates/partials/years}}
@@ -27,7 +28,12 @@
 	</div>
 
 	<div class="n-storylines__article-header">
-		Key articles
+		Key articles from
+		{{#if children.0.children}}
+			{{children.0.name}}–Present
+		{{else}}
+			{{name}}
+		{{/if}}
 	</div>
 
 	<ul class="n-storylines__top-content o-grid-row">

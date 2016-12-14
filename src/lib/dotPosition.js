@@ -22,15 +22,22 @@ module.exports = function yearDots (data) {
 function monthDots (data) {
 	data.children.forEach(month => {
 		month['dot'] = [];
+		month['dayDot'] = [];
 	});
 
 	for(let y = 0; y < data.relevantArticles.length; y++){
 		let article = data.relevantArticles[y];
 		for(let i = 0; i < data.children.length; i++) {
 			let month = data.children[i];
-			if( month.name === months[article.month]) {
+			if(month.name === months[article.month]) {
 				month['dot'].push({name: y+1, position: Math.ceil((100 / 30) * article.day)});
 			}
 		}
 	}
+	data.children.forEach(month => {
+		for(let y = 0; y < month.relevantArticles.length; y++){
+			let article = month.relevantArticles[y]
+			month['dayDot'].push({name: y+1, position: Math.ceil((100 / 30) * article.day)})
+		}
+	});
 }
